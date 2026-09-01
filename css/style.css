@@ -1,0 +1,1778 @@
+/* =========================================================
+   SHAHEEN CHEMIST WEBSITE
+   Main Stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   1. COLORS & BASIC SETTINGS
+   ========================================================= */
+
+:root {
+    --red: #c90000;
+    --blue: #003b8f;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --dark: #222222;
+    --text-gray: #555555;
+    --border: #dddddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   2. NAVBAR
+   ========================================================= */
+
+.navbar {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand img {
+    width: 85px;
+    height: auto;
+    display: block;
+}
+
+.navbar-nav {
+    gap: 25px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--dark);
+    font-size: 16px;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--red);
+}
+
+.navbar-toggler {
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    padding: 6px 9px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* =========================================
+   BRAND LOGO + NAME
+   ========================================= */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Logo */
+
+.navbar-brand img {
+    width: 85px;
+    height: auto;
+    display: block;
+}
+
+
+/* Brand Name */
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 1.1;
+    text-align: center;
+    white-space: nowrap;
+
+    transform: translateY(5px);
+}
+
+
+/* Shaheen Chemist */
+
+.brand-red {
+    color: var(--red);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+/* & Grocers */
+
+.brand-blue {
+    color: var(--blue);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* =========================================================
+   3. HERO SECTION
+   ========================================================= */
+
+.hero {
+    min-height: 600px;
+    position: relative;
+
+    background-image: url("../images/hero image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 80px 0;
+}
+
+.hero-label {
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: var(--red);
+    font-size: 56px;
+    line-height: 1.1;
+    text-align: left;
+    margin: 0 0 20px;
+}
+
+.hero-text {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 28px;
+
+    background-color: var(--red);
+    color: var(--white);
+
+    font-weight: bold;
+    border-radius: 5px;
+
+    transition: background-color 0.2s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* =========================================
+   NEWS / UPDATE TICKER
+   ========================================= */
+
+.news-ticker {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--red);
+    color: var(--white);
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   NEWS LABEL
+   ========================================= */
+
+.news-label {
+    flex-shrink: 0;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    background-color: var(--blue);
+
+    color: var(--white);
+
+    font-size: 14px;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   MOVING NEWS AREA
+   ========================================= */
+
+.news-content {
+    flex: 1;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   MOVING NEWS TEXT
+   ========================================= */
+
+.news-text {
+    display: inline-block;
+
+    padding-left: 100%;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    animation: newsScroll 18s linear infinite;
+}
+
+/* Pause news when mouse is over it */
+
+.news-text:hover {
+    animation-play-state: paused;
+}
+
+.news-separator {
+    display: inline-block;
+    margin: 0 30px;
+    font-weight: bold;
+}
+
+/* =========================================
+   NEWS ANIMATION
+   ========================================= */
+
+@keyframes newsScroll {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE NEWS TICKER
+   ========================================= */
+
+@media (max-width: 575.98px) {
+
+    .news-ticker {
+        height: 38px;
+    }
+
+
+    .news-label {
+        padding: 0 12px;
+
+        font-size: 12px;
+    }
+
+
+    .news-text {
+        font-size: 12px;
+
+        animation-duration: 15s;
+    }
+
+}
+
+/* =========================================================
+   4. HOME PAGE — STATISTICS
+   ========================================================= */
+
+.stats {
+    background-color: var(--white);
+    padding: 25px 40px;
+
+    max-width: 900px;
+    margin: 20px auto;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px 20px;
+    border-right: 1px solid var(--border);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-icon {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: var(--blue);
+    font-size: 38px;
+}
+
+.stat-item h3 {
+    color: var(--blue);
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+.stat-item p {
+    color: var(--text-gray);
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   5. HOME PAGE — SERVICE AREA
+   ========================================================= */
+
+.service-area {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 25px 0;
+    margin-top: 10px;
+}
+
+.service-content h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.service-content p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--white);
+}
+
+.service-content p span {
+    margin: 0 5px;
+}
+
+.service-logo span {
+    font-size: 55px;
+    font-weight: bold;
+    color: rgba(201, 0, 0, 0.55);
+}
+
+
+
+/* =========================================================
+   6. ABOUT US PAGE
+   ========================================================= */
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+    padding: 35px 8% 25px;
+    background-color: #f8f9fa;
+}
+
+.about-content {
+    width: 50%;
+}
+
+.about-content h1 {
+    color: var(--red);
+    font-size: 28px;
+    margin: 0 0 15px;
+    text-align: left;
+}
+
+.about-content p {
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    max-width: 500px;
+}
+
+.about-image {
+    width: 45%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   7. ABOUT US — OUR JOURNEY
+   ========================================================= */
+
+.journey-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    padding: 15px 8%;
+    background-color: #f8f9fa;
+}
+
+.journey-image {
+    width: 35%;
+}
+
+.journey-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.journey-content {
+    width: 60%;
+}
+
+.journey-content h2 {
+    color: var(--red);
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.journey-content p {
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* =========================================================
+   8. ABOUT PAGE STATISTICS
+   ========================================================= */
+
+.about-stats {
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--white);
+
+    margin: 5px 8% 15px;
+    padding: 12px 0;
+
+    border-radius: 5px;
+}
+
+.about-stat {
+    flex: 1;
+    text-align: center;
+
+    padding: 5px 10px;
+
+    border-right: 1px solid #eeeeee;
+}
+
+.about-stat:last-child {
+    border-right: none;
+}
+
+.about-stat .stat-icon {
+    color: var(--blue);
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.about-stat h3 {
+    color: var(--blue);
+    font-size: 15px;
+    line-height: 1.3;
+    margin: 0 0 8px;
+}
+
+.about-stat p {
+    color: #444444;
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+/* =========================================================
+   9. OUR VISION PAGE
+   ========================================================= */
+
+.vision-intro {
+    padding: 45px 8% 30px;
+    background-color: #f8f9fa;
+}
+
+.vision-intro h1 {
+    color: var(--red);
+    font-size: 28px;
+    text-align: left;
+    margin: 0 0 12px;
+}
+
+.vision-intro p {
+    max-width: 900px;
+    color: #444444;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.vision-values {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.vision-card {
+    background-color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.vision-icon {
+    color: var(--blue);
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.vision-card h2 {
+    color: var(--blue);
+    font-size: 18px;
+    margin: 0 0 12px;
+}
+
+.vision-card p {
+    color: var(--text-gray);
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 250px;
+}
+
+.vision-quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    background-color: var(--blue);
+    color: var(--white);
+
+    padding: 30px 8%;
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.vision-quote p {
+    max-width: 650px;
+
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+.quote-mark {
+    color: #d00068;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.vision-quote span {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   10. DEALS IN PAGE
+   ========================================================= */
+
+/* =========================================
+   DEALS IN PAGE
+   ========================================= */
+
+.deals-intro {
+    padding: 45px 0 30px;
+    background-color: #f8f9fa;
+}
+
+.deals-intro h1 {
+    color: var(--red);
+    font-size: 32px;
+    text-align: left;
+    margin: 0 0 12px;
+    font-weight: bold;
+}
+
+.deals-intro p {
+    color: #444444;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   DEAL CARDS
+   ========================================= */
+
+.deal-cards {
+    padding: 35px 0;
+    background-color: #f8f9fa;
+}
+
+.deal-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.deal-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+.deal-card h2 {
+    color: var(--blue);
+    font-size: 18px;
+    margin: 18px 18px 8px;
+    font-weight: bold;
+}
+
+.deal-card p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 18px 20px;
+}
+
+
+/* =========================================
+   ONE STOP SOLUTION
+   ========================================= */
+
+.one-stop {
+    background-color: #f4f2e9;
+    padding: 25px 0;
+    margin: 0;
+}
+
+.one-stop-icon {
+    color: var(--blue);
+    font-size: 35px;
+    line-height: 1;
+}
+
+.one-stop h2 {
+    color: var(--blue);
+    font-size: 20px;
+    margin: 0 0 6px;
+    font-weight: bold;
+}
+
+.one-stop p {
+    color: #555555;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* =========================================
+   DEALS - TABLET
+   ========================================= */
+
+@media (max-width: 991.98px) {
+
+    .deals-intro {
+        padding: 40px 0 25px;
+    }
+
+    .deals-intro h1 {
+        font-size: 30px;
+    }
+
+    .deals-intro p {
+        font-size: 15px;
+    }
+
+    .deal-cards {
+        padding: 30px 0;
+    }
+
+    .deal-card img {
+        height: 160px;
+    }
+
+}
+
+
+/* =========================================
+   DEALS - MOBILE
+   ========================================= */
+
+@media (max-width: 575.98px) {
+
+    .deals-intro {
+        padding: 30px 15px 20px;
+    }
+
+    .deals-intro h1 {
+        font-size: 27px;
+    }
+
+    .deals-intro p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .deal-cards {
+        padding: 25px 15px;
+    }
+
+    .deal-card img {
+        height: 180px;
+    }
+
+    .deal-card h2 {
+        font-size: 17px;
+        margin: 15px 15px 7px;
+    }
+
+    .deal-card p {
+        font-size: 13px;
+        margin: 0 15px 18px;
+    }
+
+    .one-stop {
+        padding: 25px 15px;
+    }
+
+    .one-stop-icon {
+        font-size: 30px;
+    }
+
+    .one-stop h2 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .one-stop p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+}
+
+/* =========================================
+   BRANCHES PAGE
+   ========================================= */
+
+.branches-intro {
+    padding: 45px 0 30px;
+    background-color: #f8f9fa;
+}
+
+.branches-intro h1 {
+    color: var(--red);
+    font-size: 32px;
+    text-align: left;
+    margin: 0 0 12px;
+    font-weight: bold;
+}
+
+.branches-intro p {
+    color: #444444;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BRANCHES MAIN
+   ========================================= */
+
+.branches-main {
+    padding: 30px 0;
+    background-color: #f8f9fa;
+}
+
+
+/* Branch List */
+
+.branch-list {
+    width: 100%;
+    background-color: var(--blue);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.branch-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.branch-item:last-child {
+    border-bottom: none;
+}
+
+.branch-item span {
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.branch-item p {
+    color: var(--white);
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* =========================================
+   MAP
+   ========================================= */
+
+.branch-map {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background-color: #dddddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.branch-map img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================
+   BRANCH INFORMATION
+   ========================================= */
+
+.branch-info {
+    background-color: #eeeeee;
+    padding: 20px 0;
+}
+
+.branch-info-card {
+    text-align: center;
+    background-color: var(--white);
+    padding: 25px 15px;
+    height: 100%;
+}
+
+.info-icon {
+    color: var(--blue);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.branch-info-card h2 {
+    color: var(--blue);
+    font-size: 17px;
+    margin: 0 0 7px;
+    font-weight: bold;
+}
+
+.branch-info-card p {
+    color: #555555;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* =========================================
+   BRANCHES - TABLET
+   ========================================= */
+
+@media (max-width: 991.98px) {
+
+    .branches-intro {
+        padding: 40px 0 25px;
+    }
+
+    .branches-intro h1 {
+        font-size: 30px;
+    }
+
+    .branches-intro p {
+        font-size: 15px;
+    }
+
+    .branches-main {
+        padding: 25px 0;
+    }
+
+    .branch-map {
+        min-height: 350px;
+    }
+
+    .branch-map img {
+        min-height: 350px;
+    }
+
+}
+
+
+/* =========================================
+   BRANCHES - MOBILE
+   ========================================= */
+
+@media (max-width: 575.98px) {
+
+    .branches-intro {
+        padding: 30px 15px 20px;
+    }
+
+    .branches-intro h1 {
+        font-size: 27px;
+    }
+
+    .branches-intro p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .branches-main {
+        padding: 20px 15px;
+    }
+
+    .branch-list {
+        padding: 8px;
+    }
+
+    .branch-item {
+        padding: 11px 7px;
+    }
+
+    .branch-item p {
+        font-size: 12px;
+    }
+
+    .branch-map {
+        min-height: 280px;
+    }
+
+    .branch-map img {
+        min-height: 280px;
+    }
+
+    .branch-info {
+        padding: 15px;
+    }
+
+    .branch-info-card {
+        padding: 22px 15px;
+    }
+
+    .info-icon {
+        font-size: 25px;
+    }
+
+    .branch-info-card h2 {
+        font-size: 16px;
+    }
+
+    .branch-info-card p {
+        font-size: 12px;
+    }
+
+}
+
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+.contact-intro {
+    padding: 45px 0 30px;
+    background-color: #f8f9fa;
+}
+
+.contact-intro h1 {
+    color: var(--red);
+    font-size: 32px;
+    text-align: left;
+    margin: 0 0 12px;
+    font-weight: bold;
+}
+
+.contact-intro p {
+    color: #444444;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   CONTACT MAIN
+   ========================================= */
+
+.contact-main {
+    padding: 35px 0;
+    background-color: #f8f9fa;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+   ========================================= */
+
+.contact-information {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.contact-information h2 {
+    color: var(--blue);
+    font-size: 22px;
+    margin: 0 0 25px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CONTACT ITEMS
+   ========================================= */
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item > span {
+    color: var(--red);
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.contact-item h3 {
+    color: var(--blue);
+    font-size: 15px;
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+.contact-item p {
+    color: #555555;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+
+.contact-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.contact-form h2 {
+    color: var(--blue);
+    font-size: 22px;
+    margin: 0 0 25px;
+    font-weight: bold;
+}
+
+
+/* Form */
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* Inputs */
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--blue);
+}
+
+
+/* Textarea */
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+
+/* Button */
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--blue);
+}
+
+
+/* =========================================
+   CONTACT BOTTOM
+   ========================================= */
+
+.contact-bottom {
+    text-align: center;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 35px 0;
+}
+
+.contact-bottom h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contact-bottom p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   CONTACT - TABLET
+   ========================================= */
+
+@media (max-width: 991.98px) {
+
+    .contact-intro {
+        padding: 40px 0 25px;
+    }
+
+    .contact-intro h1 {
+        font-size: 30px;
+    }
+
+    .contact-intro p {
+        font-size: 15px;
+    }
+
+    .contact-main {
+        padding: 30px 0;
+    }
+
+    .contact-information,
+    .contact-form {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================
+   CONTACT - MOBILE
+   ========================================= */
+
+@media (max-width: 575.98px) {
+
+    .contact-intro {
+        padding: 30px 15px 20px;
+    }
+
+    .contact-intro h1 {
+        font-size: 27px;
+    }
+
+    .contact-intro p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .contact-main {
+        padding: 25px 15px;
+    }
+
+    .contact-information,
+    .contact-form {
+        padding: 22px 18px;
+    }
+
+    .contact-information h2,
+    .contact-form h2 {
+        font-size: 19px;
+        margin-bottom: 20px;
+    }
+
+    .contact-item {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .contact-item > span {
+        font-size: 21px;
+    }
+
+    .contact-item h3 {
+        font-size: 14px;
+    }
+
+    .contact-item p {
+        font-size: 13px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .contact-bottom {
+        padding: 30px 15px;
+    }
+
+    .contact-bottom h2 {
+        font-size: 20px;
+    }
+
+    .contact-bottom p {
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================================
+   13. TABLET RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar .container {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        margin-right: auto;
+    }
+
+    .navbar-brand img {
+        width: 130px;
+    }
+
+    .navbar-toggler {
+        width: 45px;
+        height: 42px;
+
+        padding: 5px;
+        margin-left: auto;
+
+        flex-shrink: 0;
+
+        border: 1px solid var(--blue);
+        border-radius: 5px;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+
+        background-color: var(--white);
+
+        padding: 15px 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+
+        gap: 0;
+
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 550px;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        max-width: 600px;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .stats {
+        max-width: 100%;
+
+        margin: 20px 15px;
+
+        padding: 25px 15px;
+    }
+
+    .stat-item {
+        padding: 15px 5px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about-section {
+        gap: 30px;
+        padding: 35px 5%;
+    }
+
+    .about-content,
+    .about-image {
+        width: 50%;
+    }
+
+    .journey-section {
+        padding: 20px 5%;
+    }
+
+
+    /* ---------- VISION ---------- */
+
+    .vision-values {
+        margin: 0 5%;
+    }
+
+}
+
+
+/* =========================================================
+   14. MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar-brand img {
+        width: 120px;
+    }
+
+    .navbar-toggler {
+        width: 44px;
+        height: 40px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 500px;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 50px 20px;
+    }
+
+    .hero-label {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 1.15;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-button {
+        padding: 12px 24px;
+    }
+
+    .news-separator {
+    margin: 0 18px;
+}
+
+    /* ---------- STATS ---------- */
+
+    .stats {
+        margin: 15px 10px;
+        padding: 25px 10px;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid #eeeeee;
+        padding: 15px 5px;
+    }
+
+    .stat-item h3 {
+        font-size: 25px;
+    }
+
+    .stat-item p {
+        font-size: 13px;
+    }
+
+
+    /* ---------- SERVICE AREA ---------- */
+
+    .service-area {
+        text-align: center;
+        padding: 25px 15px;
+    }
+
+    .service-content h2 {
+        font-size: 25px;
+    }
+
+    .service-content p {
+        line-height: 2;
+    }
+
+    .service-logo {
+        margin-top: 25px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about-section {
+        flex-direction: column;
+
+        gap: 25px;
+
+        padding: 35px 20px;
+    }
+
+    .about-content,
+    .about-image {
+        width: 100%;
+    }
+
+    .about-content h1 {
+        font-size: 26px;
+    }
+
+    .about-image img {
+        height: 220px;
+    }
+
+
+    /* ---------- JOURNEY ---------- */
+
+    .journey-section {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 30px 20px;
+    }
+
+    .journey-image,
+    .journey-content {
+        width: 100%;
+    }
+
+    .journey-image img {
+        height: 180px;
+    }
+
+
+    /* ---------- ABOUT STATS ---------- */
+
+    .about-stats {
+        flex-wrap: wrap;
+
+        margin: 10px 20px;
+    }
+
+    .about-stat {
+        flex: 0 0 50%;
+
+        border-right: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+
+    /* ---------- VISION ---------- */
+
+    .vision-intro {
+        padding: 35px 20px 25px;
+    }
+
+    .vision-intro h1 {
+        font-size: 26px;
+    }
+
+    .vision-card {
+        padding: 25px 20px;
+    }
+
+    .vision-quote {
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   15. SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar-brand img {
+        width: 115px;
+    }
+
+    .navbar-toggler {
+        width: 42px;
+        height: 38px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero-content {
+        padding: 45px 15px;
+    }
+
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 1.2px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-button {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .stats {
+        margin: 10px;
+        padding: 20px 5px;
+    }
+
+    .stat-item h3 {
+        font-size: 23px;
+    }
+
+    .stat-item p {
+        font-size: 12px;
+    }
+
+
+    /* ---------- SERVICE AREA ---------- */
+
+    .service-area {
+        padding: 25px 15px;
+    }
+
+    .service-content h2 {
+        font-size: 22px;
+    }
+
+    .service-content p {
+        font-size: 13px;
+    }
+
+    /* ---------- ABOUT ---------- */
+
+    .about-content h1,
+    .vision-intro h1,
+    .deals-intro h1,
+    .branches-intro h1,
+    .contact-intro h1 {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    .navbar-brand img {
+        width: 65px;
+    }
+
+    .brand-red {
+        font-size: 15px;
+    }
+
+    .brand-blue {
+        font-size: 12px;
+    }
+
+    .navbar-brand {
+        gap: 7px;
+    }
+}
