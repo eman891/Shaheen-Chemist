@@ -1,6 +1,6 @@
 /* =========================================================
-   SHAHEEN CHEMIST WEBSITE
-   Main Stylesheet
+   SHAHEEN CHEMIST & GROCERS WEBSITE
+   MAIN STYLESHEET
    ========================================================= */
 
 
@@ -16,10 +16,16 @@
     --dark: #222222;
     --text-gray: #555555;
     --border: #dddddd;
+    --soft-blue: #f1f5fb;
+    --soft-red: #fff5f5;
 }
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -28,6 +34,7 @@ body {
     font-family: Arial, sans-serif;
     color: var(--dark);
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 img {
@@ -47,9 +54,14 @@ a {
     background-color: var(--white);
     border-bottom: 1px solid var(--border);
     padding: 15px 0;
+    position: relative;
+    z-index: 1000;
 }
 
 .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 0;
     margin: 0;
 }
@@ -67,6 +79,7 @@ a {
 .navbar-nav .nav-link {
     color: var(--dark);
     font-size: 16px;
+    font-weight: 500;
     padding: 8px 0;
     transition: color 0.2s ease;
 }
@@ -86,27 +99,10 @@ a {
     box-shadow: none;
 }
 
-/* =========================================
-   BRAND LOGO + NAME
-   ========================================= */
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-
-/* Logo */
-
-.navbar-brand img {
-    width: 85px;
-    height: auto;
-    display: block;
-}
-
-
-/* Brand Name */
+/* =========================================================
+   3. BRAND LOGO + NAME
+   ========================================================= */
 
 .brand-name {
     display: flex;
@@ -121,17 +117,11 @@ a {
     transform: translateY(5px);
 }
 
-
-/* Shaheen Chemist */
-
 .brand-red {
     color: var(--red);
     font-size: 21px;
     font-weight: bold;
 }
-
-
-/* & Grocers */
 
 .brand-blue {
     color: var(--blue);
@@ -139,72 +129,215 @@ a {
     font-weight: bold;
 }
 
+
 /* =========================================================
-   3. HERO SECTION
+   4. HOME PAGE — HERO CAROUSEL
    ========================================================= */
 
 .hero {
     min-height: 600px;
     position: relative;
+    overflow: hidden;
+}
 
-    background-image: url("../images/hero image.png");
+#homeCarousel {
+    width: 100%;
+    height: 600px;
+}
+
+.hero-slide {
+    height: 600px;
+
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   HERO IMAGES — ALL 5
+   ========================================================= */
+
+.hero-slide-1 {
+    background-image: url("../images/hero image.png");
+    background-position: center;
+}
+
+.hero-slide-2 {
+    background-image: url("../images/hero image 2.png");
+    background-position: center;
+}
+
+.hero-slide-3 {
+    background-image: url("../images/hero image 3.png");
+    background-position: center;
+}
+
+.hero-slide-4 {
+    background-image: url("../images/hero image 4.png");
+    background-position: center;
+}
+
+.hero-slide-5 {
+    background-image: url("../images/hero image 5.png");
+    background-position: center;
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
+
+.hero-container {
+    height: 100%;
 
     display: flex;
     align-items: center;
 }
 
-.hero-content {
-    max-width: 600px;
-    padding: 80px 0;
+
+/* =========================================================
+   HERO CAPTION
+   ========================================================= */
+
+.hero-caption {
+    max-width: 570px;
+
+    padding: 35px 40px;
+
+    background-color: rgba(255, 255, 255, 0.88);
+
+    border-left: 5px solid var(--red);
+
+    border-radius: 0 8px 8px 0;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
+
+
+/* =========================================================
+   HERO LABEL
+   ========================================================= */
 
 .hero-label {
     color: var(--blue);
+
     font-size: 14px;
     font-weight: bold;
+
     letter-spacing: 2px;
-    margin-bottom: 15px;
+
+    margin-bottom: 12px;
 }
 
-.hero h1 {
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.hero-caption h1 {
     color: var(--red);
-    font-size: 56px;
+
+    font-size: 50px;
     line-height: 1.1;
+
     text-align: left;
-    margin: 0 0 20px;
+
+    margin: 0 0 18px;
 }
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
 
 .hero-text {
-    color: #555555;
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 30px;
+    color: var(--text-gray);
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+    max-width: 500px;
 }
+
+
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
 
 .hero-button {
     display: inline-block;
-    padding: 14px 28px;
+
+    padding: 12px 26px;
 
     background-color: var(--red);
     color: var(--white);
 
     font-weight: bold;
+
     border-radius: 5px;
 
-    transition: background-color 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 .hero-button:hover {
     background-color: var(--blue);
     color: var(--white);
+
+    transform: translateY(-2px);
 }
 
-/* =========================================
-   NEWS / UPDATE TICKER
-   ========================================= */
+
+/* =========================================================
+   CAROUSEL DOTS
+   ========================================================= */
+
+#homeCarousel .carousel-indicators {
+    margin-bottom: 20px;
+    z-index: 4;
+}
+
+#homeCarousel .carousel-indicators button {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    margin: 0 5px;
+}
+
+
+/* =========================================================
+   CAROUSEL ARROWS
+   ========================================================= */
+
+#homeCarousel .carousel-control-prev,
+#homeCarousel .carousel-control-next {
+    width: 7%;
+}
+
+#homeCarousel .carousel-control-prev-icon,
+#homeCarousel .carousel-control-next-icon {
+    width: 35px;
+    height: 35px;
+
+    background-size: 70%;
+
+    background-color: rgba(0, 59, 143, 0.75);
+
+    border-radius: 50%;
+
+    padding: 8px;
+}
+
+
+/* =========================================================
+   5. NEWS / UPDATE TICKER
+   ========================================================= */
 
 .news-ticker {
     position: absolute;
@@ -225,11 +358,6 @@ a {
 
     z-index: 5;
 }
-
-
-/* =========================================
-   NEWS LABEL
-   ========================================= */
 
 .news-label {
     flex-shrink: 0;
@@ -253,11 +381,6 @@ a {
     z-index: 2;
 }
 
-
-/* =========================================
-   MOVING NEWS AREA
-   ========================================= */
-
 .news-content {
     flex: 1;
 
@@ -265,11 +388,6 @@ a {
 
     white-space: nowrap;
 }
-
-
-/* =========================================
-   MOVING NEWS TEXT
-   ========================================= */
 
 .news-text {
     display: inline-block;
@@ -284,21 +402,17 @@ a {
     animation: newsScroll 18s linear infinite;
 }
 
-/* Pause news when mouse is over it */
-
 .news-text:hover {
     animation-play-state: paused;
 }
 
 .news-separator {
     display: inline-block;
+
     margin: 0 30px;
+
     font-weight: bold;
 }
-
-/* =========================================
-   NEWS ANIMATION
-   ========================================= */
 
 @keyframes newsScroll {
 
@@ -313,123 +427,177 @@ a {
 }
 
 
-/* =========================================
-   MOBILE NEWS TICKER
-   ========================================= */
-
-@media (max-width: 575.98px) {
-
-    .news-ticker {
-        height: 38px;
-    }
-
-
-    .news-label {
-        padding: 0 12px;
-
-        font-size: 12px;
-    }
-
-
-    .news-text {
-        font-size: 12px;
-
-        animation-duration: 15s;
-    }
-
-}
-
 /* =========================================================
-   4. HOME PAGE — STATISTICS
+   6. HOME PAGE — STATISTICS
    ========================================================= */
 
-.stats {
+.stats-section {
+    background-color: #f8f9fa;
+    padding: 45px 0;
+}
+
+.stat-card {
     background-color: var(--white);
-    padding: 25px 40px;
 
-    max-width: 900px;
-    margin: 20px auto;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-.stat-item {
     text-align: center;
-    padding: 10px 20px;
-    border-right: 1px solid var(--border);
+
+    height: 100%;
+
+    padding: 28px 15px 24px;
+
+    border: 1px solid #e1e5eb;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-.stat-item:last-child {
-    border-right: none;
+.stat-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 45px;
+    height: 3px;
+
+    background-color: var(--red);
+
+    border-radius: 0 0 5px 5px;
 }
 
-.stat-icon {
+.stat-icon-circle {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background-color: var(--soft-blue);
+
+    border: 2px solid rgba(0, 59, 143, 0.15);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon-circle i {
+    color: var(--blue);
+    font-size: 28px;
+}
+
+.stat-card h3 {
+    color: var(--red);
+
     font-size: 25px;
-    margin-bottom: 8px;
-    color: var(--blue);
-    font-size: 38px;
+
+    margin: 0 0 5px;
+
+    font-weight: bold;
 }
 
-.stat-item h3 {
-    color: var(--blue);
-    font-size: 22px;
-    margin: 5px 0;
-}
-
-.stat-item p {
+.stat-card p {
     color: var(--text-gray);
+
     font-size: 14px;
+
     margin: 0;
 }
 
+.stat-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
 
 /* =========================================================
-   5. HOME PAGE — SERVICE AREA
+   7. HOME PAGE — SERVICE / BRAND AREA
    ========================================================= */
 
 .service-area {
     background-color: var(--blue);
+
     color: var(--white);
-    padding: 25px 0;
+
+    padding: 28px 0;
+
     margin-top: 10px;
 }
 
 .service-content h2 {
     margin: 0 0 8px;
-    font-size: 20px;
+
+    font-size: 23px;
+
     font-weight: bold;
+
+    color: var(--white);
 }
 
 .service-content p {
     margin: 0;
-    font-size: 14px;
-    color: var(--white);
+
+    font-size: 15px;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    line-height: 1.6;
 }
 
-.service-content p span {
-    margin: 0 5px;
+.service-area p span {
+    margin: 0 6px;
 }
 
-.service-logo span {
-    font-size: 55px;
-    font-weight: bold;
-    color: rgba(201, 0, 0, 0.55);
+.service-logo {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    padding-right: 25px;
 }
 
+.service-logo img {
+    width: 105px;
+
+    height: auto;
+
+    display: block;
+
+    opacity: 0.35;
+
+    filter: saturate(0.7);
+}
 
 
 /* =========================================================
-   6. ABOUT US PAGE
+   8. ABOUT US PAGE
    ========================================================= */
 
 .about-section {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     gap: 60px;
 
-    padding: 35px 8% 25px;
-    background-color: #f8f9fa;
+    padding: 55px 8%;
+
+    background-color: var(--white);
 }
 
 .about-content {
@@ -438,97 +606,183 @@ a {
 
 .about-content h1 {
     color: var(--red);
-    font-size: 28px;
-    margin: 0 0 15px;
+
+    font-size: 32px;
+
+    margin: 0 0 18px;
+
     text-align: left;
+
+    font-weight: bold;
+}
+
+.about-content h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    background-color: var(--blue);
+
+    margin-top: 10px;
 }
 
 .about-content p {
-    color: var(--dark);
+    color: var(--text-gray);
+
     font-size: 16px;
-    line-height: 1.6;
+
+    line-height: 1.7;
+
     margin: 0 0 20px;
-    max-width: 500px;
+
+    max-width: 550px;
 }
 
 .about-image {
     width: 45%;
+
+    position: relative;
+}
+
+.about-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border: 3px solid var(--red);
+
+    top: 10px;
+    left: 10px;
+
+    border-radius: 8px;
+
+    z-index: 0;
 }
 
 .about-image img {
     width: 100%;
-    height: 220px;
+
+    height: 280px;
+
     object-fit: cover;
+
     display: block;
-    border-radius: 5px;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    z-index: 1;
 }
 
 
 /* =========================================================
-   7. ABOUT US — OUR JOURNEY
+   9. ABOUT US — OUR JOURNEY
    ========================================================= */
 
 .journey-section {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
 
-    padding: 15px 8%;
+    gap: 45px;
+
+    padding: 50px 8%;
+
     background-color: #f8f9fa;
 }
 
 .journey-image {
-    width: 35%;
+    width: 38%;
 }
 
 .journey-image img {
     width: 100%;
-    height: 180px;
+
+    height: 240px;
+
     object-fit: cover;
+
     display: block;
-    border-radius: 5px;
+
+    border-radius: 8px;
+
+    border-left: 5px solid var(--blue);
 }
 
 .journey-content {
-    width: 60%;
+    width: 57%;
 }
 
 .journey-content h2 {
-    color: var(--red);
-    font-size: 20px;
-    margin: 0 0 10px;
+    color: var(--blue);
+
+    font-size: 25px;
+
+    margin: 0 0 14px;
+
+    font-weight: bold;
+}
+
+.journey-content h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    background-color: var(--red);
+
+    margin-top: 8px;
 }
 
 .journey-content p {
-    color: var(--dark);
-    font-size: 16px;
-    line-height: 1.5;
+    color: var(--text-gray);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
     margin: 0;
+
+    max-width: 650px;
 }
 
 
 /* =========================================================
-   8. ABOUT PAGE STATISTICS
+   10. ABOUT PAGE STATISTICS
    ========================================================= */
 
 .about-stats {
     display: flex;
+
     justify-content: center;
 
     background-color: var(--white);
 
-    margin: 5px 8% 15px;
-    padding: 12px 0;
+    margin: 35px 8%;
 
-    border-radius: 5px;
+    padding: 25px 0;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
 
 .about-stat {
     flex: 1;
+
     text-align: center;
 
-    padding: 5px 10px;
+    padding: 8px 15px;
 
     border-right: 1px solid #eeeeee;
 }
@@ -538,112 +792,193 @@ a {
 }
 
 .about-stat .stat-icon {
-    color: var(--blue);
-    font-size: 38px;
-    margin-bottom: 8px;
+    color: var(--red);
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
 }
 
 .about-stat h3 {
     color: var(--blue);
-    font-size: 15px;
+
+    font-size: 16px;
+
     line-height: 1.3;
+
     margin: 0 0 8px;
+
+    font-weight: bold;
 }
 
 .about-stat p {
-    color: #444444;
+    color: var(--text-gray);
+
     font-size: 12px;
-    line-height: 1.4;
+
+    line-height: 1.5;
+
     margin: 0;
 }
 
 
 /* =========================================================
-   9. OUR VISION PAGE
+   11. OUR VISION PAGE
    ========================================================= */
 
 .vision-intro {
-    padding: 45px 8% 30px;
-    background-color: #f8f9fa;
+    padding: 55px 8% 40px;
+
+    background-color: var(--white);
+
+    text-align: left;
 }
 
 .vision-intro h1 {
     color: var(--red);
-    font-size: 28px;
+
+    font-size: 32px;
+
     text-align: left;
-    margin: 0 0 12px;
+
+    margin: 0 0 18px;
+
+    font-weight: bold;
+}
+
+.vision-intro h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    background-color: var(--blue);
+
+    margin-top: 10px;
 }
 
 .vision-intro p {
     max-width: 900px;
-    color: #444444;
-    font-size: 15px;
-    line-height: 1.6;
+
+    color: var(--text-gray);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
     margin: 0;
 }
 
+
+/* =========================================================
+   VISION VALUES
+   ========================================================= */
+
 .vision-values {
     background-color: #f8f9fa;
-    padding: 40px 0;
+
+    padding: 45px 0;
 }
 
 .vision-card {
     background-color: var(--white);
+
     text-align: center;
-    padding: 30px 20px;
+
+    padding: 35px 22px;
+
     height: 100%;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    border-top: 4px solid var(--blue);
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
 }
 
 .vision-icon {
-    color: var(--blue);
-    font-size: 38px;
-    margin-bottom: 15px;
+    color: var(--red);
+
+    font-size: 40px;
+
+    margin-bottom: 18px;
 }
 
 .vision-card h2 {
     color: var(--blue);
-    font-size: 18px;
+
+    font-size: 19px;
+
     margin: 0 0 12px;
+
+    font-weight: bold;
 }
 
 .vision-card p {
     color: var(--text-gray);
-    font-size: 13px;
-    line-height: 1.6;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
     margin: 0 auto;
-    max-width: 250px;
+
+    max-width: 280px;
 }
+
+
+/* =========================================================
+   VISION QUOTE
+   ========================================================= */
 
 .vision-quote {
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     gap: 20px;
 
     background-color: var(--blue);
+
     color: var(--white);
 
-    padding: 30px 8%;
+    padding: 35px 8%;
+
     margin-top: 25px;
 
     text-align: center;
 }
 
 .vision-quote p {
-    max-width: 650px;
+    max-width: 700px;
 
-    font-size: 15px;
+    font-size: 16px;
+
     font-style: italic;
-    line-height: 1.5;
+
+    line-height: 1.6;
 
     margin: 0;
 }
 
 .quote-mark {
-    color: #d00068;
+    color: var(--red);
+
     font-size: 50px;
+
     font-weight: bold;
 }
 
@@ -653,719 +988,671 @@ a {
 
 
 /* =========================================================
-   10. DEALS IN PAGE
+   12. DEALS IN PAGE
    ========================================================= */
 
-/* =========================================
-   DEALS IN PAGE
-   ========================================= */
-
 .deals-intro {
-    padding: 45px 0 30px;
-    background-color: #f8f9fa;
+    padding: 55px 0 35px;
+
+    background-color: var(--white);
 }
 
 .deals-intro h1 {
     color: var(--red);
+
     font-size: 32px;
+
     text-align: left;
-    margin: 0 0 12px;
+
+    margin: 0 0 15px;
+
     font-weight: bold;
 }
 
+.deals-intro h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    background-color: var(--blue);
+
+    margin-top: 10px;
+}
+
 .deals-intro p {
-    color: #444444;
+    color: var(--text-gray);
+
     font-size: 16px;
+
     margin: 0;
-    line-height: 1.6;
+
+    line-height: 1.7;
 }
 
 
-/* =========================================
+/* =========================================================
    DEAL CARDS
-   ========================================= */
+   ========================================================= */
 
 .deal-cards {
-    padding: 35px 0;
+    padding: 40px 0 50px;
+
     background-color: #f8f9fa;
 }
 
 .deal-card {
     background-color: var(--white);
+
     border-radius: 8px;
+
     overflow: hidden;
+
     text-align: left;
+
     height: 100%;
+
+    border-bottom: 4px solid var(--blue);
+
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .deal-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    border-bottom-color: var(--red);
 }
 
 .deal-card img {
     width: 100%;
+
     height: 170px;
+
     object-fit: cover;
+
     display: block;
 }
 
 .deal-card h2 {
     color: var(--blue);
+
     font-size: 18px;
+
     margin: 18px 18px 8px;
+
     font-weight: bold;
 }
 
 .deal-card p {
-    color: #555555;
+    color: var(--text-gray);
+
     font-size: 14px;
+
     line-height: 1.6;
+
     margin: 0 18px 20px;
 }
 
 
-/* =========================================
+/* =========================================================
    ONE STOP SOLUTION
-   ========================================= */
+   ========================================================= */
 
 .one-stop {
     background-color: #f4f2e9;
-    padding: 25px 0;
+
+    padding: 30px 0;
+
     margin: 0;
 }
 
 .one-stop-icon {
-    color: var(--blue);
+    color: var(--red);
+
     font-size: 35px;
+
     line-height: 1;
 }
 
 .one-stop h2 {
     color: var(--blue);
+
     font-size: 20px;
+
     margin: 0 0 6px;
+
     font-weight: bold;
 }
 
 .one-stop p {
-    color: #555555;
+    color: var(--text-gray);
+
     font-size: 14px;
+
     margin: 0;
+
+    line-height: 1.5;
 }
 
 
-/* =========================================
-   DEALS - TABLET
-   ========================================= */
-
-@media (max-width: 991.98px) {
-
-    .deals-intro {
-        padding: 40px 0 25px;
-    }
-
-    .deals-intro h1 {
-        font-size: 30px;
-    }
-
-    .deals-intro p {
-        font-size: 15px;
-    }
-
-    .deal-cards {
-        padding: 30px 0;
-    }
-
-    .deal-card img {
-        height: 160px;
-    }
-
-}
-
-
-/* =========================================
-   DEALS - MOBILE
-   ========================================= */
-
-@media (max-width: 575.98px) {
-
-    .deals-intro {
-        padding: 30px 15px 20px;
-    }
-
-    .deals-intro h1 {
-        font-size: 27px;
-    }
-
-    .deals-intro p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .deal-cards {
-        padding: 25px 15px;
-    }
-
-    .deal-card img {
-        height: 180px;
-    }
-
-    .deal-card h2 {
-        font-size: 17px;
-        margin: 15px 15px 7px;
-    }
-
-    .deal-card p {
-        font-size: 13px;
-        margin: 0 15px 18px;
-    }
-
-    .one-stop {
-        padding: 25px 15px;
-    }
-
-    .one-stop-icon {
-        font-size: 30px;
-    }
-
-    .one-stop h2 {
-        font-size: 17px;
-        line-height: 1.4;
-    }
-
-    .one-stop p {
-        font-size: 13px;
-        line-height: 1.5;
-    }
-
-}
-
-/* =========================================
-   BRANCHES PAGE
-   ========================================= */
+/* =========================================================
+   13. BRANCHES PAGE
+   ========================================================= */
 
 .branches-intro {
-    padding: 45px 0 30px;
-    background-color: #f8f9fa;
+    padding: 55px 0 35px;
+
+    background-color: var(--white);
 }
 
 .branches-intro h1 {
     color: var(--red);
+
     font-size: 32px;
+
     text-align: left;
-    margin: 0 0 12px;
+
+    margin: 0 0 15px;
+
     font-weight: bold;
 }
 
+.branches-intro h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    background-color: var(--blue);
+
+    margin-top: 10px;
+}
+
 .branches-intro p {
-    color: #444444;
+    color: var(--text-gray);
+
     font-size: 16px;
+
     margin: 0;
-    line-height: 1.6;
+
+    line-height: 1.7;
 }
 
 
-/* =========================================
+/* =========================================================
    BRANCHES MAIN
-   ========================================= */
+   ========================================================= */
 
 .branches-main {
-    padding: 30px 0;
+    padding: 35px 0 45px;
+
     background-color: #f8f9fa;
 }
 
 
-/* Branch List */
+/* =========================================================
+   BRANCH LIST
+   ========================================================= */
 
 .branch-list {
     width: 100%;
+
     background-color: var(--blue);
-    padding: 10px;
-    border-radius: 6px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    height: 100%;
 }
 
 .branch-item {
     display: flex;
+
     align-items: center;
-    gap: 10px;
-    padding: 12px 8px;
+
+    gap: 12px;
+
+    padding: 14px 10px;
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        padding-left 0.2s ease;
 }
 
 .branch-item:last-child {
     border-bottom: none;
 }
 
+.branch-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+
+    padding-left: 15px;
+}
+
 .branch-item span {
-    font-size: 15px;
+    color: var(--white);
+
+    font-size: 18px;
+
     flex-shrink: 0;
 }
 
 .branch-item p {
     color: var(--white);
+
     font-size: 13px;
+
+    line-height: 1.5;
+
     margin: 0;
 }
 
 
-/* =========================================
+/* =========================================================
    MAP
-   ========================================= */
+   ========================================================= */
 
 .branch-map {
     width: 100%;
+
     height: 100%;
+
     min-height: 400px;
+
     background-color: #dddddd;
-    border-radius: 6px;
+
+    border-radius: 8px;
+
     overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .branch-map img {
     width: 100%;
+
     height: 100%;
+
     min-height: 400px;
+
     object-fit: cover;
+
     display: block;
 }
 
 
-/* =========================================
+/* =========================================================
    BRANCH INFORMATION
-   ========================================= */
+   ========================================================= */
 
 .branch-info {
-    background-color: #eeeeee;
-    padding: 20px 0;
+    background-color: var(--white);
+
+    padding: 35px 0;
 }
 
 .branch-info-card {
     text-align: center;
-    background-color: var(--white);
-    padding: 25px 15px;
+
+    background-color: #f8f9fa;
+
+    padding: 28px 15px;
+
     height: 100%;
+
+    border-radius: 8px;
+
+    border-top: 3px solid var(--red);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.branch-info-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .info-icon {
     color: var(--blue);
-    font-size: 28px;
+
+    font-size: 30px;
+
     margin-bottom: 10px;
 }
 
 .branch-info-card h2 {
     color: var(--blue);
+
     font-size: 17px;
+
     margin: 0 0 7px;
+
     font-weight: bold;
 }
 
 .branch-info-card p {
-    color: #555555;
+    color: var(--text-gray);
+
     font-size: 13px;
+
+    line-height: 1.5;
+
     margin: 0;
 }
 
 
-/* =========================================
-   BRANCHES - TABLET
-   ========================================= */
-
-@media (max-width: 991.98px) {
-
-    .branches-intro {
-        padding: 40px 0 25px;
-    }
-
-    .branches-intro h1 {
-        font-size: 30px;
-    }
-
-    .branches-intro p {
-        font-size: 15px;
-    }
-
-    .branches-main {
-        padding: 25px 0;
-    }
-
-    .branch-map {
-        min-height: 350px;
-    }
-
-    .branch-map img {
-        min-height: 350px;
-    }
-
-}
-
-
-/* =========================================
-   BRANCHES - MOBILE
-   ========================================= */
-
-@media (max-width: 575.98px) {
-
-    .branches-intro {
-        padding: 30px 15px 20px;
-    }
-
-    .branches-intro h1 {
-        font-size: 27px;
-    }
-
-    .branches-intro p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .branches-main {
-        padding: 20px 15px;
-    }
-
-    .branch-list {
-        padding: 8px;
-    }
-
-    .branch-item {
-        padding: 11px 7px;
-    }
-
-    .branch-item p {
-        font-size: 12px;
-    }
-
-    .branch-map {
-        min-height: 280px;
-    }
-
-    .branch-map img {
-        min-height: 280px;
-    }
-
-    .branch-info {
-        padding: 15px;
-    }
-
-    .branch-info-card {
-        padding: 22px 15px;
-    }
-
-    .info-icon {
-        font-size: 25px;
-    }
-
-    .branch-info-card h2 {
-        font-size: 16px;
-    }
-
-    .branch-info-card p {
-        font-size: 12px;
-    }
-
-}
-
-/* =========================================
-   CONTACT PAGE
-   ========================================= */
+/* =========================================================
+   14. CONTACT PAGE
+   ========================================================= */
 
 .contact-intro {
-    padding: 45px 0 30px;
-    background-color: #f8f9fa;
+    padding: 55px 0 35px;
+
+    background-color: var(--white);
 }
 
 .contact-intro h1 {
     color: var(--red);
+
     font-size: 32px;
+
     text-align: left;
-    margin: 0 0 12px;
+
+    margin: 0 0 15px;
+
     font-weight: bold;
 }
 
+.contact-intro h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    background-color: var(--blue);
+
+    margin-top: 10px;
+}
+
 .contact-intro p {
-    color: #444444;
+    color: var(--text-gray);
+
     font-size: 16px;
+
     margin: 0;
-    line-height: 1.6;
+
+    line-height: 1.7;
 }
 
 
-/* =========================================
+/* =========================================================
    CONTACT MAIN
-   ========================================= */
+   ========================================================= */
 
 .contact-main {
-    padding: 35px 0;
+    padding: 40px 0 50px;
+
     background-color: #f8f9fa;
 }
 
 
-/* =========================================
+/* =========================================================
    CONTACT INFORMATION
-   ========================================= */
+   ========================================================= */
 
 .contact-information {
     background-color: var(--white);
-    padding: 30px;
+
+    padding: 32px;
+
     border-radius: 8px;
+
+    border-top: 4px solid var(--blue);
+
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+    height: 100%;
 }
 
 .contact-information h2 {
     color: var(--blue);
+
     font-size: 22px;
+
     margin: 0 0 25px;
+
     font-weight: bold;
 }
 
 
-/* =========================================
+/* =========================================================
    CONTACT ITEMS
-   ========================================= */
+   ========================================================= */
 
 .contact-item {
     display: flex;
+
     align-items: flex-start;
+
     gap: 15px;
+
     margin-bottom: 25px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #eeeeee;
 }
 
 .contact-item:last-child {
     margin-bottom: 0;
+
+    padding-bottom: 0;
+
+    border-bottom: none;
 }
 
 .contact-item > span {
     color: var(--red);
+
     font-size: 24px;
+
     line-height: 1;
+
     flex-shrink: 0;
 }
 
 .contact-item h3 {
     color: var(--blue);
+
     font-size: 15px;
+
     margin: 0 0 5px;
+
     font-weight: bold;
 }
 
 .contact-item p {
-    color: #555555;
+    color: var(--text-gray);
+
     font-size: 14px;
+
     margin: 0;
+
     line-height: 1.5;
 }
 
 
-/* =========================================
+/* =========================================================
    CONTACT FORM
-   ========================================= */
+   ========================================================= */
 
 .contact-form {
     background-color: var(--white);
-    padding: 30px;
+
+    padding: 32px;
+
     border-radius: 8px;
+
+    border-top: 4px solid var(--red);
+
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+    height: 100%;
 }
 
 .contact-form h2 {
     color: var(--blue);
+
     font-size: 22px;
+
     margin: 0 0 25px;
+
     font-weight: bold;
 }
 
 
-/* Form */
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
 
 .contact-form form {
     display: flex;
+
     flex-direction: column;
+
     gap: 14px;
 }
 
 
-/* Inputs */
+/* =========================================================
+   INPUTS
+   ========================================================= */
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
+
     box-sizing: border-box;
+
     padding: 13px;
+
     border: 1px solid #dddddd;
+
     border-radius: 5px;
+
     font-family: Arial, sans-serif;
+
     font-size: 14px;
+
     outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: var(--blue);
+
+    box-shadow: 0 0 0 2px rgba(0, 59, 143, 0.08);
 }
-
-
-/* Textarea */
 
 .contact-form textarea {
     resize: vertical;
+
     min-height: 140px;
 }
 
 
-/* Button */
+/* =========================================================
+   CONTACT BUTTON
+   ========================================================= */
 
 .contact-form button {
     align-self: flex-start;
+
     padding: 13px 25px;
+
     border: none;
+
     border-radius: 5px;
+
     background-color: var(--red);
+
     color: var(--white);
+
     font-weight: bold;
+
     font-size: 14px;
+
     cursor: pointer;
-    transition: background-color 0.2s ease;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .contact-form button:hover {
     background-color: var(--blue);
+
+    transform: translateY(-2px);
 }
 
 
-/* =========================================
+/* =========================================================
    CONTACT BOTTOM
-   ========================================= */
+   ========================================================= */
 
 .contact-bottom {
     text-align: center;
+
     background-color: var(--blue);
+
     color: var(--white);
-    padding: 35px 0;
+
+    padding: 38px 0;
 }
 
 .contact-bottom h2 {
     margin: 0 0 8px;
+
     font-size: 22px;
+
     font-weight: bold;
 }
 
 .contact-bottom p {
     margin: 0;
+
     font-size: 14px;
+
     line-height: 1.6;
 }
 
 
-/* =========================================
-   CONTACT - TABLET
-   ========================================= */
-
-@media (max-width: 991.98px) {
-
-    .contact-intro {
-        padding: 40px 0 25px;
-    }
-
-    .contact-intro h1 {
-        font-size: 30px;
-    }
-
-    .contact-intro p {
-        font-size: 15px;
-    }
-
-    .contact-main {
-        padding: 30px 0;
-    }
-
-    .contact-information,
-    .contact-form {
-        padding: 25px;
-    }
-
-}
-
-
-/* =========================================
-   CONTACT - MOBILE
-   ========================================= */
-
-@media (max-width: 575.98px) {
-
-    .contact-intro {
-        padding: 30px 15px 20px;
-    }
-
-    .contact-intro h1 {
-        font-size: 27px;
-    }
-
-    .contact-intro p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .contact-main {
-        padding: 25px 15px;
-    }
-
-    .contact-information,
-    .contact-form {
-        padding: 22px 18px;
-    }
-
-    .contact-information h2,
-    .contact-form h2 {
-        font-size: 19px;
-        margin-bottom: 20px;
-    }
-
-    .contact-item {
-        gap: 12px;
-        margin-bottom: 20px;
-    }
-
-    .contact-item > span {
-        font-size: 21px;
-    }
-
-    .contact-item h3 {
-        font-size: 14px;
-    }
-
-    .contact-item p {
-        font-size: 13px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 13px;
-        padding: 12px;
-    }
-
-    .contact-form button {
-        width: 100%;
-        padding: 12px;
-    }
-
-    .contact-bottom {
-        padding: 30px 15px;
-    }
-
-    .contact-bottom h2 {
-        font-size: 20px;
-    }
-
-    .contact-bottom p {
-        font-size: 13px;
-    }
-
-}
-
 /* =========================================================
-   13. TABLET RESPONSIVE
+   15. TABLET RESPONSIVE
    ========================================================= */
 
 @media (max-width: 991.98px) {
@@ -1385,19 +1672,22 @@ a {
     }
 
     .navbar-brand img {
-        width: 130px;
+        width: 80px;
     }
 
     .navbar-toggler {
         width: 45px;
+
         height: 42px;
 
         padding: 5px;
+
         margin-left: auto;
 
         flex-shrink: 0;
 
         border: 1px solid var(--blue);
+
         border-radius: 5px;
     }
 
@@ -1422,40 +1712,60 @@ a {
     }
 
 
-    /* ---------- HERO ---------- */
+    /* ---------- BRAND ---------- */
 
-    .hero {
-        min-height: 550px;
-
-        background-position: center;
+    .brand-red {
+        font-size: 19px;
     }
 
-    .hero-content {
-        max-width: 600px;
-        padding: 60px 20px;
-    }
-
-    .hero h1 {
-        font-size: 46px;
-    }
-
-    .hero-text {
+    .brand-blue {
         font-size: 17px;
     }
 
 
-    /* ---------- STATS ---------- */
+    /* ---------- HOME HERO ---------- */
 
-    .stats {
-        max-width: 100%;
-
-        margin: 20px 15px;
-
-        padding: 25px 15px;
+    .hero {
+        min-height: 550px;
     }
 
-    .stat-item {
-        padding: 15px 5px;
+    #homeCarousel,
+    .hero-slide {
+        height: 550px;
+    }
+
+    .hero-container {
+        padding: 0 5%;
+    }
+
+    .hero-caption {
+        max-width: 500px;
+
+        padding: 30px 32px;
+    }
+
+    .hero-caption h1 {
+        font-size: 44px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+
+    /* ---------- HOME STATS ---------- */
+
+    .stats-section {
+        padding: 35px 15px;
+    }
+
+
+    /* ---------- SERVICE AREA ---------- */
+
+    .service-logo {
+        justify-content: flex-end;
+
+        padding-right: 0;
     }
 
 
@@ -1463,7 +1773,8 @@ a {
 
     .about-section {
         gap: 30px;
-        padding: 35px 5%;
+
+        padding: 45px 5%;
     }
 
     .about-content,
@@ -1471,22 +1782,77 @@ a {
         width: 50%;
     }
 
+    .about-image img {
+        height: 240px;
+    }
+
     .journey-section {
-        padding: 20px 5%;
+        padding: 40px 5%;
     }
 
 
     /* ---------- VISION ---------- */
 
+    .vision-intro {
+        padding: 45px 5% 30px;
+    }
+
     .vision-values {
-        margin: 0 5%;
+        padding: 35px 5%;
+    }
+
+
+    /* ---------- DEALS ---------- */
+
+    .deals-intro {
+        padding: 45px 5% 30px;
+    }
+
+    .deal-cards {
+        padding: 30px 5% 40px;
+    }
+
+    .deal-card img {
+        height: 160px;
+    }
+
+
+    /* ---------- BRANCHES ---------- */
+
+    .branches-intro {
+        padding: 45px 5% 30px;
+    }
+
+    .branches-main {
+        padding: 30px 5% 40px;
+    }
+
+    .branch-map,
+    .branch-map img {
+        min-height: 350px;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact-intro {
+        padding: 45px 5% 30px;
+    }
+
+    .contact-main {
+        padding: 30px 5% 40px;
+    }
+
+    .contact-information,
+    .contact-form {
+        padding: 27px;
     }
 
 }
 
 
 /* =========================================================
-   14. MOBILE RESPONSIVE
+   16. MOBILE RESPONSIVE
    ========================================================= */
 
 @media (max-width: 767.98px) {
@@ -1494,100 +1860,186 @@ a {
     /* ---------- NAVBAR ---------- */
 
     .navbar-brand img {
-        width: 120px;
+        width: 70px;
+    }
+
+    .brand-red {
+        font-size: 16px;
+    }
+
+    .brand-blue {
+        font-size: 13px;
+    }
+
+    .navbar-brand {
+        gap: 7px;
     }
 
     .navbar-toggler {
         width: 44px;
+
         height: 40px;
     }
 
 
-    /* ---------- HERO ---------- */
+    /* ---------- HOME HERO ---------- */
 
     .hero {
         min-height: 500px;
-
-        background-position: center;
     }
 
-    .hero-content {
-        padding: 50px 20px;
+    #homeCarousel,
+    .hero-slide {
+        height: 500px;
     }
 
-    .hero-label {
-        font-size: 12px;
-        letter-spacing: 1.5px;
+    .hero-container {
+        padding: 0 20px;
+
+        align-items: center;
     }
 
-    .hero h1 {
-        font-size: 40px;
+    .hero-caption {
+        max-width: 90%;
+
+        padding: 25px 22px;
+
+        border-left-width: 4px;
+    }
+
+    .hero-caption h1 {
+        font-size: 34px;
+
         line-height: 1.15;
     }
 
+    .hero-label {
+        font-size: 11px;
+
+        letter-spacing: 1.2px;
+    }
+
     .hero-text {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size: 14px;
+
+        line-height: 1.5;
+
+        margin-bottom: 20px;
     }
 
     .hero-button {
-        padding: 12px 24px;
+        padding: 11px 20px;
+
+        font-size: 14px;
+    }
+
+    #homeCarousel .carousel-control-prev,
+    #homeCarousel .carousel-control-next {
+        width: 10%;
+    }
+
+
+    /* ---------- NEWS TICKER ---------- */
+
+    .news-ticker {
+        height: 38px;
+    }
+
+    .news-label {
+        padding: 0 12px;
+
+        font-size: 12px;
+    }
+
+    .news-text {
+        font-size: 12px;
+
+        animation-duration: 15s;
     }
 
     .news-separator {
-    margin: 0 18px;
-}
-
-    /* ---------- STATS ---------- */
-
-    .stats {
-        margin: 15px 10px;
-        padding: 25px 10px;
+        margin: 0 18px;
     }
 
-    .stat-item {
-        border-right: none;
-        border-bottom: 1px solid #eeeeee;
-        padding: 15px 5px;
+
+    /* ---------- HOME STATS ---------- */
+
+    .stats-section {
+        padding: 30px 10px;
     }
 
-    .stat-item h3 {
-        font-size: 25px;
+    .stat-card {
+        padding: 24px 10px 20px;
     }
 
-    .stat-item p {
-        font-size: 13px;
+    .stat-icon-circle {
+        width: 55px;
+
+        height: 55px;
+    }
+
+    .stat-icon-circle i {
+        font-size: 24px;
+    }
+
+    .stat-card h3 {
+        font-size: 22px;
+    }
+
+    .stat-card p {
+        font-size: 12px;
     }
 
 
     /* ---------- SERVICE AREA ---------- */
 
     .service-area {
+        padding: 28px 15px;
+
         text-align: center;
-        padding: 25px 15px;
+    }
+
+    .service-content {
+        padding-left: 0;
     }
 
     .service-content h2 {
-        font-size: 25px;
+        font-size: 20px;
+
+        line-height: 1.4;
     }
 
     .service-content p {
-        line-height: 2;
+        font-size: 13px;
+
+        line-height: 1.8;
     }
 
     .service-logo {
-        margin-top: 25px;
+        justify-content: center;
+
+        padding: 15px 0 0;
+
+        margin-top: 10px;
+    }
+
+    .service-logo img {
+        width: 65px;
+
+        opacity: 0.35;
     }
 
 
-    /* ---------- ABOUT ---------- */
+    /* =====================================================
+       ABOUT
+       ===================================================== */
 
     .about-section {
         flex-direction: column;
 
-        gap: 25px;
+        gap: 30px;
 
-        padding: 35px 20px;
+        padding: 40px 20px;
     }
 
     .about-content,
@@ -1596,22 +2048,30 @@ a {
     }
 
     .about-content h1 {
-        font-size: 26px;
+        font-size: 27px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .about-image {
+        margin: 5px 10px 0;
+        width: calc(100% - 20px);
     }
 
     .about-image img {
         height: 220px;
     }
 
-
-    /* ---------- JOURNEY ---------- */
-
     .journey-section {
         flex-direction: column;
 
-        gap: 20px;
+        gap: 25px;
 
-        padding: 30px 20px;
+        padding: 40px 20px;
     }
 
     .journey-image,
@@ -1620,7 +2080,15 @@ a {
     }
 
     .journey-image img {
-        height: 180px;
+        height: 200px;
+    }
+
+    .journey-content h2 {
+        font-size: 22px;
+    }
+
+    .journey-content p {
+        font-size: 14px;
     }
 
 
@@ -1629,44 +2097,292 @@ a {
     .about-stats {
         flex-wrap: wrap;
 
-        margin: 10px 20px;
+        margin: 20px;
+
+        padding: 15px 0;
     }
 
     .about-stat {
         flex: 0 0 50%;
 
+        padding: 12px 8px;
+
         border-right: none;
+
         border-bottom: 1px solid #eeeeee;
     }
 
+    .about-stat:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
 
-    /* ---------- VISION ---------- */
+    .about-stat .stat-icon {
+        font-size: 30px;
+    }
+
+
+    /* =====================================================
+       VISION
+       ===================================================== */
 
     .vision-intro {
-        padding: 35px 20px 25px;
+        padding: 40px 20px 30px;
     }
 
     .vision-intro h1 {
-        font-size: 26px;
+        font-size: 27px;
+    }
+
+    .vision-intro p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .vision-values {
+        padding: 30px 20px;
     }
 
     .vision-card {
-        padding: 25px 20px;
+        padding: 28px 20px;
+    }
+
+    .vision-icon {
+        font-size: 35px;
+    }
+
+    .vision-card h2 {
+        font-size: 18px;
+    }
+
+    .vision-card p {
+        font-size: 13px;
     }
 
     .vision-quote {
         flex-direction: column;
 
-        gap: 10px;
+        gap: 8px;
 
         padding: 30px 20px;
+
+        margin-top: 15px;
     }
 
+    .vision-quote p {
+        font-size: 14px;
+    }
+
+    .quote-mark {
+        font-size: 42px;
+    }
+
+
+    /* =====================================================
+       DEALS
+       ===================================================== */
+
+    .deals-intro {
+        padding: 40px 20px 25px;
+    }
+
+    .deals-intro h1 {
+        font-size: 27px;
+    }
+
+    .deals-intro p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .deal-cards {
+        padding: 25px 20px 35px;
+    }
+
+    .deal-card img {
+        height: 180px;
+    }
+
+    .deal-card h2 {
+        font-size: 17px;
+
+        margin: 15px 15px 7px;
+    }
+
+    .deal-card p {
+        font-size: 13px;
+
+        margin: 0 15px 18px;
+    }
+
+    .one-stop {
+        padding: 25px 15px;
+    }
+
+    .one-stop-icon {
+        font-size: 30px;
+    }
+
+    .one-stop h2 {
+        font-size: 17px;
+
+        line-height: 1.4;
+    }
+
+    .one-stop p {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       BRANCHES
+       ===================================================== */
+
+    .branches-intro {
+        padding: 40px 20px 25px;
+    }
+
+    .branches-intro h1 {
+        font-size: 27px;
+    }
+
+    .branches-intro p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .branches-main {
+        padding: 25px 20px 35px;
+    }
+
+    .branch-list {
+        padding: 8px;
+    }
+
+    .branch-item {
+        padding: 12px 7px;
+    }
+
+    .branch-item p {
+        font-size: 12px;
+    }
+
+    .branch-map {
+        min-height: 280px;
+    }
+
+    .branch-map img {
+        min-height: 280px;
+    }
+
+    .branch-info {
+        padding: 25px 15px;
+    }
+
+    .branch-info-card {
+        padding: 22px 15px;
+    }
+
+    .info-icon {
+        font-size: 25px;
+    }
+
+    .branch-info-card h2 {
+        font-size: 16px;
+    }
+
+    .branch-info-card p {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       CONTACT
+       ===================================================== */
+
+    .contact-intro {
+        padding: 40px 20px 25px;
+    }
+
+    .contact-intro h1 {
+        font-size: 27px;
+    }
+
+    .contact-intro p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .contact-main {
+        padding: 25px 20px 35px;
+    }
+
+    .contact-information,
+    .contact-form {
+        padding: 22px 18px;
+    }
+
+    .contact-information h2,
+    .contact-form h2 {
+        font-size: 19px;
+
+        margin-bottom: 20px;
+    }
+
+    .contact-item {
+        gap: 12px;
+
+        margin-bottom: 20px;
+
+        padding-bottom: 17px;
+    }
+
+    .contact-item > span {
+        font-size: 21px;
+    }
+
+    .contact-item h3 {
+        font-size: 14px;
+    }
+
+    .contact-item p {
+        font-size: 13px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 13px;
+
+        padding: 12px;
+    }
+
+    .contact-form button {
+        width: 100%;
+
+        padding: 12px;
+    }
+
+    .contact-bottom {
+        padding: 30px 15px;
+    }
+
+    .contact-bottom h2 {
+        font-size: 20px;
+    }
+
+    .contact-bottom p {
+        font-size: 13px;
+    }
 }
 
 
 /* =========================================================
-   15. SMALL PHONES
+   17. SMALL PHONES
    ========================================================= */
 
 @media (max-width: 575.98px) {
@@ -1676,89 +2392,6 @@ a {
     .navbar {
         padding: 10px 0;
     }
-
-    .navbar-brand img {
-        width: 115px;
-    }
-
-    .navbar-toggler {
-        width: 42px;
-        height: 38px;
-    }
-
-
-    /* ---------- HERO ---------- */
-
-    .hero {
-        min-height: 480px;
-    }
-
-    .hero-content {
-        padding: 45px 15px;
-    }
-
-    .hero-label {
-        font-size: 11px;
-        letter-spacing: 1.2px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .hero-text {
-        font-size: 15px;
-    }
-
-    .hero-button {
-        padding: 11px 20px;
-        font-size: 14px;
-    }
-
-
-    /* ---------- STATS ---------- */
-
-    .stats {
-        margin: 10px;
-        padding: 20px 5px;
-    }
-
-    .stat-item h3 {
-        font-size: 23px;
-    }
-
-    .stat-item p {
-        font-size: 12px;
-    }
-
-
-    /* ---------- SERVICE AREA ---------- */
-
-    .service-area {
-        padding: 25px 15px;
-    }
-
-    .service-content h2 {
-        font-size: 22px;
-    }
-
-    .service-content p {
-        font-size: 13px;
-    }
-
-    /* ---------- ABOUT ---------- */
-
-    .about-content h1,
-    .vision-intro h1,
-    .deals-intro h1,
-    .branches-intro h1,
-    .contact-intro h1 {
-        font-size: 24px;
-    }
-
-}
-
-@media (max-width: 575.98px) {
 
     .navbar-brand img {
         width: 65px;
@@ -1774,5 +2407,210 @@ a {
 
     .navbar-brand {
         gap: 7px;
+    }
+
+    .navbar-toggler {
+        width: 42px;
+
+        height: 38px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 480px;
+    }
+
+    #homeCarousel,
+    .hero-slide {
+        height: 480px;
+    }
+
+    .hero-container {
+        padding: 0 15px;
+    }
+
+    .hero-caption {
+        max-width: 94%;
+
+        padding: 22px 18px;
+    }
+
+    .hero-caption h1 {
+        font-size: 29px;
+    }
+
+    .hero-text {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+    .hero-label {
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+    .hero-button {
+        font-size: 13px;
+
+        padding: 10px 18px;
+    }
+
+
+    /* ---------- HERO ARROWS ---------- */
+
+    #homeCarousel .carousel-control-prev-icon,
+    #homeCarousel .carousel-control-next-icon {
+        width: 30px;
+
+        height: 30px;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .stat-card {
+        padding: 22px 8px 18px;
+    }
+
+    .stat-icon-circle {
+        width: 50px;
+
+        height: 50px;
+    }
+
+    .stat-icon-circle i {
+        font-size: 21px;
+    }
+
+    .stat-card h3 {
+        font-size: 20px;
+    }
+
+    .stat-card p {
+        font-size: 11px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about-content h1,
+    .vision-intro h1,
+    .deals-intro h1,
+    .branches-intro h1,
+    .contact-intro h1 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .about-image img {
+        height: 190px;
+    }
+
+    .journey-image img {
+        height: 170px;
+    }
+
+
+    /* ---------- ABOUT STATS ---------- */
+
+    .about-stats {
+        margin: 15px;
+    }
+
+    .about-stat {
+        padding: 10px 5px;
+    }
+
+    .about-stat h3 {
+        font-size: 14px;
+    }
+
+    .about-stat p {
+        font-size: 11px;
+    }
+
+
+    /* ---------- VISION ---------- */
+
+    .vision-card {
+        padding: 25px 15px;
+    }
+
+    .vision-quote {
+        padding: 25px 15px;
+    }
+
+
+    /* ---------- DEALS ---------- */
+
+    .deal-card img {
+        height: 180px;
+    }
+
+
+    /* ---------- BRANCHES ---------- */
+
+    .branch-map,
+    .branch-map img {
+        min-height: 250px;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact-information,
+    .contact-form {
+        padding: 20px 16px;
+    }
+}
+
+
+/* =========================================================
+   18. VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .navbar-brand img {
+        width: 58px;
+    }
+
+    .brand-red {
+        font-size: 13px;
+    }
+
+    .brand-blue {
+        font-size: 11px;
+    }
+
+    .hero-caption {
+        max-width: 95%;
+
+        padding: 20px 15px;
+    }
+
+    .hero-caption h1 {
+        font-size: 26px;
+    }
+
+    .hero-text {
+        font-size: 12px;
+    }
+
+    .hero-button {
+        font-size: 12px;
+
+        padding: 9px 15px;
+    }
+
+    .about-stats {
+        margin: 10px;
     }
 }

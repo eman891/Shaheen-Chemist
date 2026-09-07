@@ -2,24 +2,25 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Our Branches - Shaheen Chemist</title>
 
-    <!-- Bootstrap 5.3.8 -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-      
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-
 
     <!-- ================= NAVBAR ================= -->
 
@@ -27,74 +28,57 @@
 
         <div class="container">
 
-            <!-- Logo -->
             <a class="navbar-brand" href="branches.html">
 
-    <img src="images/sc logo.png"
-         alt="Shaheen Chemist Logo"
-         class="img-fluid">
+                <img src="images/sc logo.png"
+                    alt="Shaheen Chemist Logo"
+                    class="img-fluid">
 
-    <div class="brand-name">
-        <span class="brand-red">SHAHEEN CHEMIST</span>
-        <span class="brand-blue">&amp; GROCERS</span>
-    </div>
+                <div class="brand-name">
+                    <span class="brand-red">SHAHEEN CHEMIST</span>
+                    <span class="brand-blue">&amp; GROCERS</span>
+                </div>
 
-</a>
+            </a>
 
-
-            <!-- Mobile Menu Button -->
             <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
                 <span class="navbar-toggler-icon"></span>
 
             </button>
 
-
-            <!-- Navigation -->
             <div class="collapse navbar-collapse" id="mainNavbar">
 
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            Home
-                        </a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">
-                            About Us
-                        </a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="vision.html">
-                            Our Vision
-                        </a>
+                        <a class="nav-link" href="vision.html">Our Vision</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="deals.html">
-                            Deals In
-                        </a>
+                        <a class="nav-link" href="deals.html">Deals In</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="branches.html">
-                            Branches
-                        </a>
+                        <a class="nav-link active" href="branches.html">Branches</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                            Contact Us
-                        </a>
+                        <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
 
                 </ul>
@@ -106,9 +90,7 @@
     </nav>
 
 
-
     <main>
-
 
         <!-- ================= BRANCHES INTRO ================= -->
 
@@ -136,8 +118,7 @@
         </section>
 
 
-
-        <!-- ================= BRANCHES ================= -->
+        <!-- ================= BRANCHES + MAP ================= -->
 
         <section class="branches-main">
 
@@ -145,93 +126,215 @@
 
                 <div class="row g-4">
 
-
                     <!-- Branch List -->
 
                     <div class="col-12 col-lg-4">
 
                         <div class="branch-list">
 
+                            <button class="branch-item active"
+                                data-location="Shaheen Chemist F-6 Markaz Islamabad"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+F-6+Markaz+Islamabad&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+F-6+Markaz+Islamabad">
 
-                            <div class="branch-item">
-                                <span>📍</span>
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
                                 <p>F-6 Markaz</p>
-                            </div>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
 
-                            <div class="branch-item">
-                                <span>📍</span>
+                            <button class="branch-item"
+                                data-location="Shaheen Chemist F-10 Markaz Islamabad"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+F-10+Markaz+Islamabad&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+F-10+Markaz+Islamabad">
+
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
                                 <p>F-10 Markaz</p>
-                            </div>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
 
-                            <div class="branch-item">
-                                <span>📍</span>
+                            <button class="branch-item"
+                                data-location="Shaheen Chemist Bahria Town Phase 4 Rawalpindi"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+Bahria+Town+Phase+4+Rawalpindi&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+Bahria+Town+Phase+4+Rawalpindi">
+
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
                                 <p>Bahria Town, Phase 4</p>
-                            </div>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
 
-                            <div class="branch-item">
-                                <span>📍</span>
+                            <button class="branch-item"
+                                data-location="Shaheen Chemist B-17 Islamabad"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+B-17+Islamabad&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+B-17+Islamabad">
+
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
                                 <p>B-17</p>
-                            </div>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
 
-                            <div class="branch-item">
-                                <span>📍</span>
+                            <button class="branch-item"
+                                data-location="Shaheen Chemist DHA Phase 2 Islamabad"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+DHA+Phase+2+Islamabad&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+DHA+Phase+2+Islamabad">
+
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
                                 <p>DHA Phase 2</p>
-                            </div>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
 
-                            <div class="branch-item">
-                                <span>📍</span>
-                                <p>Ghouri Towm</p>
-                            </div>
+                            <button class="branch-item"
+                                data-location="Shaheen Chemist Ghouri Town Islamabad"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+Ghouri+Town+Islamabad&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+Ghouri+Town+Islamabad">
+
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
+                                <p>Ghouri Town</p>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
 
-                            <div class="branch-item">
-                                <span>📍</span>
+                            <button class="branch-item"
+                                data-location="Shaheen Chemist Safa Gold Mall F-7 Islamabad"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+Safa+Gold+Mall+F-7+Islamabad&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+Safa+Gold+Mall+F-7+Islamabad">
+
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
                                 <p>Safa Gold Mall, F-7</p>
-                            </div>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
 
-                            <div class="branch-item">
-                                <span>📍</span>
+                            <button class="branch-item"
+                                data-location="Shaheen Chemist Bahria Enclave Islamabad"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+Bahria+Enclave+Islamabad&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+Bahria+Enclave+Islamabad">
+
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
                                 <p>Bahria Enclave</p>
-                            </div>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
 
-                            <div class="branch-item">
-                                <span>📍</span>
+                            <button class="branch-item"
+                                data-location="Shaheen Chemist G-11 Markaz Islamabad"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+G-11+Markaz+Islamabad&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+G-11+Markaz+Islamabad">
+
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
                                 <p>G-11 Markaz</p>
-                            </div>
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
 
-                            <div class="branch-item">
-                                <span>📍</span>
+                            <button class="branch-item"
+                                data-location="Shaheen Chemist I-8 Markaz Islamabad"
+                                data-map="https://www.google.com/maps?q=Shaheen+Chemist+I-8+Markaz+Islamabad&output=embed"
+                                data-link="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+I-8+Markaz+Islamabad">
+
+                                <span>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </span>
+
                                 <p>I-8 Markaz</p>
-                            </div>
 
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
 
                         </div>
 
                     </div>
 
 
-
-                    <!-- Map -->
+                    <!-- MAP -->
 
                     <div class="col-12 col-lg-8">
 
                         <div class="branch-map">
 
-                            <img src="images/map.jpg"
-                                 alt="Shaheen Chemist Branch Locations">
+                            <iframe
+                                id="branchMap"
+                                src="https://www.google.com/maps?q=Shaheen+Chemist+F-6+Markaz+Islamabad&output=embed"
+                                loading="lazy"
+                                allowfullscreen>
+                            </iframe>
+
+                            <div class="map-actions">
+
+                                <a
+                                    id="openMap"
+                                    href="https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+F-6+Markaz+Islamabad"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                    Open in Google Maps
+
+                                </a>
+
+
+                                <button id="copyMap">
+
+                                    <i class="bi bi-copy"></i>
+                                    Copy Location Link
+
+                                </button>
+
+                            </div>
 
                         </div>
 
                     </div>
-
 
                 </div>
 
@@ -240,86 +343,54 @@
         </section>
 
 
-
-        <!-- ================= BRANCH INFORMATION ================= -->
+        <!-- ================= BRANCH HIGHLIGHT ================= -->
 
         <section class="branch-info">
 
             <div class="container">
 
-                <div class="row g-0">
+                <div class="branch-info-strip">
 
+                    <div class="branch-info-item">
 
-                    <!-- 25+ Branches -->
+                        <i class="bi bi-shop"></i>
 
-                    <div class="col-12 col-md-4">
-
-                        <div class="branch-info-card h-100">
-
-                            <div class="info-icon">
-                                ♙
-                            </div>
-
-                            <h2>
-                                25+ Branches
-                            </h2>
-
-                            <p>
-                                Serving our communities
-                            </p>
-
+                        <div>
+                            <strong>25+ Branches</strong>
+                            <span>Serving our communities</span>
                         </div>
 
                     </div>
 
 
+                    <div class="branch-info-divider"></div>
 
-                    <!-- Locations -->
 
-                    <div class="col-12 col-md-4">
+                    <div class="branch-info-item">
 
-                        <div class="branch-info-card h-100">
+                        <i class="bi bi-geo-alt-fill"></i>
 
-                            <div class="info-icon">
-                                📍
-                            </div>
-
-                            <h2>
-                                Across 10+ Major Locations
-                            </h2>
-
-                            <p>
-                                Rawalpindi &amp; Islamabad
-                            </p>
-
+                        <div>
+                            <strong>Major Locations</strong>
+                            <span>Rawalpindi &amp; Islamabad</span>
                         </div>
 
                     </div>
 
 
+                    <div class="branch-info-divider"></div>
 
-                    <!-- Easy Access -->
 
-                    <div class="col-12 col-md-4">
+                    <div class="branch-info-item">
 
-                        <div class="branch-info-card h-100">
+                        <i class="bi bi-sign-turn-right-fill"></i>
 
-                            <div class="info-icon">
-                                ↗
-                            </div>
-
-                            <h2>
-                                Easy Access
-                            </h2>
-
-                            <p>
-                                For Everyone
-                            </p>
-
+                        <div>
+                            <strong>Easy Access</strong>
+                            <span>Find your nearest branch</span>
                         </div>
 
                     </div>
-
 
                 </div>
 
@@ -327,12 +398,73 @@
 
         </section>
 
-
     </main>
 
 
+    <!-- ================= MAP SCRIPT ================= -->
 
-    <!-- ================= BOOTSTRAP JS ================= -->
+    <script>
+
+        const branchItems = document.querySelectorAll(".branch-item");
+        const branchMap = document.getElementById("branchMap");
+        const openMap = document.getElementById("openMap");
+        const copyMap = document.getElementById("copyMap");
+
+        let currentMapLink =
+            "https://www.google.com/maps/search/?api=1&query=Shaheen+Chemist+F-6+Markaz+Islamabad";
+
+
+        branchItems.forEach(item => {
+
+            item.addEventListener("click", function () {
+
+                branchItems.forEach(branch => {
+                    branch.classList.remove("active");
+                });
+
+                this.classList.add("active");
+
+                const mapURL = this.dataset.map;
+                const locationLink = this.dataset.link;
+
+                branchMap.src = mapURL;
+
+                openMap.href = locationLink;
+
+                currentMapLink = locationLink;
+
+            });
+
+        });
+
+
+        copyMap.addEventListener("click", function () {
+
+            navigator.clipboard.writeText(currentMapLink)
+                .then(() => {
+
+                    const originalText = copyMap.innerHTML;
+
+                    copyMap.innerHTML =
+                        '<i class="bi bi-check-lg"></i> Link Copied!';
+
+                    setTimeout(() => {
+                        copyMap.innerHTML = originalText;
+                    }, 1800);
+
+                })
+                .catch(() => {
+
+                    alert("Unable to copy the location link.");
+
+                });
+
+        });
+
+    </script>
+
+
+    <!-- Bootstrap JS -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
