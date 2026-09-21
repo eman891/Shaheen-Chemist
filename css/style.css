@@ -1,5 +1,5 @@
 /* =========================================================
-   SHAHEEN CHEMIST & GROCERS WEBSITE
+   SHAHEEN CHEMIST & GROCERS
    MAIN STYLESHEET
    ========================================================= */
 
@@ -101,7 +101,7 @@ a {
 
 
 /* =========================================================
-   3. BRAND LOGO + NAME
+   3. BRAND NAME
    ========================================================= */
 
 .brand-name {
@@ -110,270 +110,64 @@ a {
     justify-content: center;
     align-items: center;
 
-    line-height: 1.1;
+    line-height: 1.05;
     text-align: center;
     white-space: nowrap;
+}
 
-    transform: translateY(5px);
+.brand-red,
+.brand-blue {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.05;
 }
 
 .brand-red {
     color: var(--red);
-    font-size: 21px;
-    font-weight: bold;
 }
 
 .brand-blue {
     color: var(--blue);
-    font-size: 19px;
-    font-weight: bold;
 }
 
 
 /* =========================================================
-   4. HOME PAGE — HERO CAROUSEL
-   ========================================================= */
-
-.hero {
-    min-height: 600px;
-    position: relative;
-    overflow: hidden;
-}
-
-#homeCarousel {
-    width: 100%;
-    height: 600px;
-}
-
-.hero-slide {
-    height: 600px;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    position: relative;
-}
-
-
-/* =========================================================
-   HERO IMAGES — ALL 5
-   ========================================================= */
-
-.hero-slide-1 {
-    background-image: url("../images/hero image.png");
-    background-position: center;
-}
-
-.hero-slide-2 {
-    background-image: url("../images/hero image 2.png");
-    background-position: center;
-}
-
-.hero-slide-3 {
-    background-image: url("../images/hero image 3.png");
-    background-position: center;
-}
-
-.hero-slide-4 {
-    background-image: url("../images/hero image 4.png");
-    background-position: center;
-}
-
-.hero-slide-5 {
-    background-image: url("../images/hero image 5.png");
-    background-position: center;
-}
-
-
-/* =========================================================
-   HERO CONTAINER
-   ========================================================= */
-
-.hero-container {
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-}
-
-
-/* =========================================================
-   HERO CAPTION
-   ========================================================= */
-
-.hero-caption {
-    max-width: 570px;
-
-    padding: 35px 40px;
-
-    background-color: rgba(255, 255, 255, 0.88);
-
-    border-left: 5px solid var(--red);
-
-    border-radius: 0 8px 8px 0;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-
-/* =========================================================
-   HERO LABEL
-   ========================================================= */
-
-.hero-label {
-    color: var(--blue);
-
-    font-size: 14px;
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 12px;
-}
-
-
-/* =========================================================
-   HERO HEADING
-   ========================================================= */
-
-.hero-caption h1 {
-    color: var(--red);
-
-    font-size: 50px;
-    line-height: 1.1;
-
-    text-align: left;
-
-    margin: 0 0 18px;
-}
-
-
-/* =========================================================
-   HERO TEXT
-   ========================================================= */
-
-.hero-text {
-    color: var(--text-gray);
-
-    font-size: 17px;
-    line-height: 1.6;
-
-    margin-bottom: 25px;
-
-    max-width: 500px;
-}
-
-
-/* =========================================================
-   HERO BUTTON
-   ========================================================= */
-
-.hero-button {
-    display: inline-block;
-
-    padding: 12px 26px;
-
-    background-color: var(--red);
-    color: var(--white);
-
-    font-weight: bold;
-
-    border-radius: 5px;
-
-    transition: all 0.25s ease;
-}
-
-.hero-button:hover {
-    background-color: var(--blue);
-    color: var(--white);
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   CAROUSEL DOTS
-   ========================================================= */
-
-#homeCarousel .carousel-indicators {
-    margin-bottom: 20px;
-    z-index: 4;
-}
-
-#homeCarousel .carousel-indicators button {
-    width: 9px;
-    height: 9px;
-
-    border-radius: 50%;
-
-    margin: 0 5px;
-}
-
-
-/* =========================================================
-   CAROUSEL ARROWS
-   ========================================================= */
-
-#homeCarousel .carousel-control-prev,
-#homeCarousel .carousel-control-next {
-    width: 7%;
-}
-
-#homeCarousel .carousel-control-prev-icon,
-#homeCarousel .carousel-control-next-icon {
-    width: 35px;
-    height: 35px;
-
-    background-size: 70%;
-
-    background-color: rgba(0, 59, 143, 0.75);
-
-    border-radius: 50%;
-
-    padding: 8px;
-}
-
-
-/* =========================================================
-   5. NEWS / UPDATE TICKER
+   4. NEWS / UPDATE TICKER
    ========================================================= */
 
 .news-ticker {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
     width: 100%;
-    height: 42px;
+    height: 40px;
 
     display: flex;
     align-items: center;
 
     background-color: var(--red);
+
     color: var(--white);
 
     overflow: hidden;
-
-    z-index: 5;
+    position: relative;
+    z-index: 900;
 }
 
 .news-label {
-    flex-shrink: 0;
+    height: 40px;
 
-    height: 100%;
+    min-width: 130px;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    padding: 0 20px;
+    padding: 0 18px;
 
     background-color: var(--blue);
 
     color: var(--white);
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
 
     white-space: nowrap;
@@ -392,68 +186,279 @@ a {
 .news-text {
     display: inline-block;
 
-    padding-left: 100%;
+    padding-left: 25px;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
 
-    white-space: nowrap;
-
-    animation: newsScroll 18s linear infinite;
-}
-
-.news-text:hover {
-    animation-play-state: paused;
+    animation: newsMove 22s linear infinite;
 }
 
 .news-separator {
-    display: inline-block;
-
-    margin: 0 30px;
-
-    font-weight: bold;
+    margin: 0 35px;
+    color: var(--white);
 }
 
-@keyframes newsScroll {
+@keyframes newsMove {
 
     0% {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
 
     100% {
         transform: translateX(-100%);
     }
-
 }
 
 
 /* =========================================================
-   6. HOME PAGE — STATISTICS
+   5. HOME PAGE — HERO CAROUSEL
+   ========================================================= */
+
+.hero-carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--light-gray);
+}
+
+.hero-slide {
+    position: relative;
+    height: 515px;
+    overflow: hidden;
+}
+
+.hero-slide-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   6. HERO CAPTION
+   ========================================================= */
+
+.hero-caption {
+    position: absolute;
+
+    left: 8.5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 520px;
+    max-width: 42%;
+
+    padding: 32px 40px;
+
+    background-color: rgba(255, 255, 255, 0.92);
+
+    border-left: 5px solid var(--red);
+
+    border-radius: 0 7px 7px 0;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HERO LABEL
+   ========================================================= */
+
+.hero-label {
+    color: var(--blue);
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin: 0 0 14px;
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.hero-caption h1 {
+    color: var(--red);
+
+    font-size: 44px;
+    font-weight: 400;
+
+    line-height: 1.08;
+
+    margin: 0 0 18px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.hero-text {
+    color: var(--text-gray);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 0 0 24px;
+
+    max-width: 450px;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 12px 23px;
+
+    background-color: var(--red);
+    color: var(--white);
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   7. CAROUSEL INDICATORS
+   ========================================================= */
+
+.hero-carousel .carousel-indicators {
+    margin-bottom: 16px;
+    z-index: 4;
+}
+
+.hero-carousel .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    border: none;
+
+    margin: 0 4px;
+
+    background-color: var(--white);
+
+    opacity: 0.65;
+}
+
+.hero-carousel .carousel-indicators button.active {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   8. CAROUSEL ARROWS
+   ========================================================= */
+
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    width: 55px;
+    z-index: 4;
+}
+
+.hero-carousel .carousel-control-prev-icon,
+.hero-carousel .carousel-control-next-icon {
+    width: 34px;
+    height: 34px;
+
+    background-color: rgba(0, 59, 143, 0.65);
+
+    border-radius: 50%;
+
+    background-size: 50%;
+}
+
+.hero-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
+.hero-carousel .carousel-control-next:hover .carousel-control-next-icon {
+    background-color: var(--blue);
+}
+
+
+/* =========================================================
+   9. SLIDE CAPTION POSITIONS
+   ========================================================= */
+
+.slide-medicine .hero-caption {
+    left: 8.5%;
+}
+
+.slide-grocery .hero-caption {
+    left: 8.5%;
+}
+
+.slide-cosmetics .hero-caption {
+    left: 8.5%;
+}
+
+.slide-optics .hero-caption {
+    left: 8.5%;
+}
+
+.slide-perfume .hero-caption {
+    left: 8.5%;
+}
+
+
+/* =========================================================
+   10. HOME STATISTICS
    ========================================================= */
 
 .stats-section {
     background-color: #f8f9fa;
-    padding: 45px 0;
+    padding: 42px 0;
 }
 
 .stat-card {
+    position: relative;
+
+    height: 175px;
+
     background-color: var(--white);
+
+    border: 1px solid #e2e5ea;
+    border-radius: 9px;
 
     text-align: center;
 
-    height: 100%;
+    padding: 25px 15px 18px;
 
-    padding: 28px 15px 24px;
-
-    border: 1px solid #e1e5eb;
-
-    border-radius: 10px;
-
-    position: relative;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 
     transition:
         transform 0.25s ease,
-        box-shadow 0.25s ease;
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+    overflow: hidden;
 }
 
 .stat-card::before {
@@ -466,7 +471,7 @@ a {
 
     transform: translateX(-50%);
 
-    width: 45px;
+    width: 42px;
     height: 3px;
 
     background-color: var(--red);
@@ -474,56 +479,66 @@ a {
     border-radius: 0 0 5px 5px;
 }
 
+.stat-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d5dce7;
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+
 .stat-icon-circle {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
 
-    margin: 0 auto 15px;
-
-    border-radius: 50%;
-
-    background-color: var(--soft-blue);
-
-    border: 2px solid rgba(0, 59, 143, 0.15);
+    margin: 0 auto 12px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #f3f6fb;
+
+    border: 2px solid #d9e2ef;
+
+    color: var(--blue);
+
+    font-size: 26px;
 }
 
-.stat-icon-circle i {
-    color: var(--blue);
-    font-size: 28px;
-}
+
+/* =========================================================
+   STAT TEXT
+   ========================================================= */
 
 .stat-card h3 {
     color: var(--red);
 
-    font-size: 25px;
+    font-size: 22px;
+    font-weight: bold;
 
     margin: 0 0 5px;
-
-    font-weight: bold;
 }
 
 .stat-card p {
     color: var(--text-gray);
 
-    font-size: 14px;
+    font-size: 13px;
 
     margin: 0;
 }
 
-.stat-card:hover {
-    transform: translateY(-6px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
-}
-
 
 /* =========================================================
-   7. HOME PAGE — SERVICE / BRAND AREA
+   11. HOME SERVICE AREA
    ========================================================= */
 
 .service-area {
@@ -531,60 +546,68 @@ a {
 
     color: var(--white);
 
-    padding: 28px 0;
+    padding: 30px 0;
 
-    margin-top: 10px;
+    margin: 0;
 }
 
 .service-content h2 {
-    margin: 0 0 8px;
-
-    font-size: 23px;
-
-    font-weight: bold;
-
     color: var(--white);
+
+    font-size: 28px;
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    margin: 0 0 7px;
+}
+
+.service-content h2 span {
+    white-space: nowrap;
 }
 
 .service-content p {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 14px;
+
     margin: 0;
-
-    font-size: 15px;
-
-    color: rgba(255, 255, 255, 0.90);
 
     line-height: 1.6;
 }
 
-.service-area p span {
-    margin: 0 6px;
-}
-
-.service-logo {
-    display: flex;
-
-    justify-content: flex-end;
-
-    align-items: center;
-
-    padding-right: 25px;
-}
-
-.service-logo img {
-    width: 105px;
-
-    height: auto;
-
-    display: block;
-
-    opacity: 0.35;
-
-    filter: saturate(0.7);
+.service-content p span {
+    margin: 0 7px;
 }
 
 
 /* =========================================================
-   8. ABOUT US PAGE
+   SERVICE LOGO
+   ========================================================= */
+
+.service-logo-wrapper {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    padding-right: 30px;
+}
+
+.service-logo {
+    width: 85px;
+    height: auto;
+
+    opacity: 1;
+
+    filter: none;
+
+    display: block;
+}
+
+
+/* =========================================================
+   12. ABOUT US PAGE
    ========================================================= */
 
 .about-section {
@@ -643,7 +666,6 @@ a {
 
 .about-image {
     width: 45%;
-
     position: relative;
 }
 
@@ -677,13 +699,12 @@ a {
     border-radius: 8px;
 
     position: relative;
-
     z-index: 1;
 }
 
 
 /* =========================================================
-   9. ABOUT US — OUR JOURNEY
+   13. ABOUT — OUR JOURNEY
    ========================================================= */
 
 .journey-section {
@@ -758,7 +779,7 @@ a {
 
 
 /* =========================================================
-   10. ABOUT PAGE STATISTICS
+   14. ABOUT STATISTICS
    ========================================================= */
 
 .about-stats {
@@ -823,7 +844,7 @@ a {
 
 
 /* =========================================================
-   11. OUR VISION PAGE
+   15. OUR VISION PAGE
    ========================================================= */
 
 .vision-intro {
@@ -988,7 +1009,7 @@ a {
 
 
 /* =========================================================
-   12. DEALS IN PAGE
+   16. DEALS IN PAGE
    ========================================================= */
 
 .deals-intro {
@@ -1144,7 +1165,7 @@ a {
 
 
 /* =========================================================
-   13. BRANCHES PAGE
+   17. BRANCHES PAGE
    ========================================================= */
 
 .branches-intro {
@@ -1198,11 +1219,6 @@ a {
 
     background-color: #f8f9fa;
 }
-
-
-/* =========================================================
-   BRANCH LIST
-   ========================================================= */
 
 .branch-list {
     width: 100%;
@@ -1264,7 +1280,7 @@ a {
 
 
 /* =========================================================
-   MAP
+   BRANCH MAP
    ========================================================= */
 
 .branch-map {
@@ -1360,7 +1376,7 @@ a {
 
 
 /* =========================================================
-   14. CONTACT PAGE
+   18. CONTACT PAGE
    ========================================================= */
 
 .contact-intro {
@@ -1530,11 +1546,6 @@ a {
     font-weight: bold;
 }
 
-
-/* =========================================================
-   CONTACT FORM
-   ========================================================= */
-
 .contact-form form {
     display: flex;
 
@@ -1545,7 +1556,7 @@ a {
 
 
 /* =========================================================
-   INPUTS
+   CONTACT INPUTS
    ========================================================= */
 
 .contact-form input,
@@ -1652,7 +1663,7 @@ a {
 
 
 /* =========================================================
-   15. TABLET RESPONSIVE
+   19. TABLET — MAX 991.98px
    ========================================================= */
 
 @media (max-width: 991.98px) {
@@ -1661,10 +1672,6 @@ a {
 
     .navbar {
         padding: 12px 0;
-    }
-
-    .navbar .container {
-        width: 100%;
     }
 
     .navbar-brand {
@@ -1677,7 +1684,6 @@ a {
 
     .navbar-toggler {
         width: 45px;
-
         height: 42px;
 
         padding: 5px;
@@ -1687,7 +1693,6 @@ a {
         flex-shrink: 0;
 
         border: 1px solid var(--blue);
-
         border-radius: 5px;
     }
 
@@ -1711,61 +1716,55 @@ a {
         padding: 10px 15px;
     }
 
-
-    /* ---------- BRAND ---------- */
-
-    .brand-red {
-        font-size: 19px;
-    }
-
+    .brand-red,
     .brand-blue {
-        font-size: 17px;
+        font-size: 18px;
     }
 
 
-    /* ---------- HOME HERO ---------- */
+    /* ---------- HERO ---------- */
 
-    .hero {
-        min-height: 550px;
-    }
-
-    #homeCarousel,
     .hero-slide {
-        height: 550px;
-    }
-
-    .hero-container {
-        padding: 0 5%;
+        height: 500px;
     }
 
     .hero-caption {
-        max-width: 500px;
+        left: 7%;
 
-        padding: 30px 32px;
+        width: 480px;
+        max-width: 52%;
+
+        padding: 28px 32px;
     }
 
     .hero-caption h1 {
-        font-size: 44px;
+        font-size: 38px;
     }
 
     .hero-text {
-        font-size: 16px;
+        font-size: 14px;
     }
 
 
-    /* ---------- HOME STATS ---------- */
+    /* ---------- STATISTICS ---------- */
 
     .stats-section {
-        padding: 35px 15px;
+        padding: 35px 0;
+    }
+
+    .stat-card {
+        height: 170px;
     }
 
 
-    /* ---------- SERVICE AREA ---------- */
+    /* ---------- SERVICE ---------- */
 
-    .service-logo {
-        justify-content: flex-end;
+    .service-content h2 {
+        font-size: 25px;
+    }
 
-        padding-right: 0;
+    .service-logo-wrapper {
+        padding-right: 20px;
     }
 
 
@@ -1773,7 +1772,6 @@ a {
 
     .about-section {
         gap: 30px;
-
         padding: 45px 5%;
     }
 
@@ -1847,12 +1845,11 @@ a {
     .contact-form {
         padding: 27px;
     }
-
 }
 
 
 /* =========================================================
-   16. MOBILE RESPONSIVE
+   20. MOBILE — MAX 767.98px
    ========================================================= */
 
 @media (max-width: 767.98px) {
@@ -1868,7 +1865,7 @@ a {
     }
 
     .brand-blue {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .navbar-brand {
@@ -1877,46 +1874,65 @@ a {
 
     .navbar-toggler {
         width: 44px;
-
         height: 40px;
     }
 
 
-    /* ---------- HOME HERO ---------- */
+    /* ---------- NEWS TICKER ---------- */
 
-    .hero {
-        min-height: 500px;
+    .news-label {
+        min-width: 110px;
+
+        padding: 0 12px;
+
+        font-size: 11px;
     }
 
-    #homeCarousel,
+    .news-text {
+        font-size: 11px;
+    }
+
+    .news-separator {
+        margin: 0 20px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
     .hero-slide {
-        height: 500px;
+        height: 520px;
     }
 
-    .hero-container {
-        padding: 0 20px;
-
-        align-items: center;
+    .hero-slide-image {
+        object-position: center;
     }
 
     .hero-caption {
-        max-width: 90%;
+        left: 6%;
+        top: 50%;
 
-        padding: 25px 22px;
+        width: 88%;
+        max-width: none;
+
+        padding: 25px 27px;
 
         border-left-width: 4px;
     }
 
-    .hero-caption h1 {
-        font-size: 34px;
+    .hero-label {
+        font-size: 10px;
 
-        line-height: 1.15;
+        letter-spacing: 1.5px;
+
+        margin-bottom: 11px;
     }
 
-    .hero-label {
-        font-size: 11px;
+    .hero-caption h1 {
+        font-size: 32px;
 
-        letter-spacing: 1.2px;
+        line-height: 1.1;
+
+        margin-bottom: 14px;
     }
 
     .hero-text {
@@ -1930,60 +1946,42 @@ a {
     .hero-button {
         padding: 11px 20px;
 
-        font-size: 14px;
+        font-size: 13px;
     }
 
-    #homeCarousel .carousel-control-prev,
-    #homeCarousel .carousel-control-next {
-        width: 10%;
+    .hero-carousel .carousel-control-prev,
+    .hero-carousel .carousel-control-next {
+        width: 45px;
     }
 
-
-    /* ---------- NEWS TICKER ---------- */
-
-    .news-ticker {
-        height: 38px;
-    }
-
-    .news-label {
-        padding: 0 12px;
-
-        font-size: 12px;
-    }
-
-    .news-text {
-        font-size: 12px;
-
-        animation-duration: 15s;
-    }
-
-    .news-separator {
-        margin: 0 18px;
+    .hero-carousel .carousel-control-prev-icon,
+    .hero-carousel .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
     }
 
 
-    /* ---------- HOME STATS ---------- */
+    /* ---------- STATISTICS ---------- */
 
     .stats-section {
         padding: 30px 10px;
     }
 
     .stat-card {
-        padding: 24px 10px 20px;
+        height: 165px;
+
+        padding: 23px 10px 15px;
     }
 
     .stat-icon-circle {
         width: 55px;
-
         height: 55px;
-    }
 
-    .stat-icon-circle i {
-        font-size: 24px;
+        font-size: 23px;
     }
 
     .stat-card h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .stat-card p {
@@ -1991,48 +1989,44 @@ a {
     }
 
 
-    /* ---------- SERVICE AREA ---------- */
+    /* ---------- SERVICE ---------- */
 
     .service-area {
-        padding: 28px 15px;
-
-        text-align: center;
+        padding: 30px 15px;
     }
 
     .service-content {
-        padding-left: 0;
+        text-align: center;
     }
 
     .service-content h2 {
-        font-size: 20px;
+        font-size: 22px;
 
-        line-height: 1.4;
+        line-height: 1.35;
+    }
+
+    .service-content h2 span {
+        white-space: normal;
     }
 
     .service-content p {
         font-size: 13px;
+    }
 
-        line-height: 1.8;
+    .service-logo-wrapper {
+        justify-content: center;
+
+        padding-right: 0;
+
+        margin-top: 22px;
     }
 
     .service-logo {
-        justify-content: center;
-
-        padding: 15px 0 0;
-
-        margin-top: 10px;
-    }
-
-    .service-logo img {
-        width: 65px;
-
-        opacity: 0.35;
+        width: 70px;
     }
 
 
-    /* =====================================================
-       ABOUT
-       ===================================================== */
+    /* ---------- ABOUT ---------- */
 
     .about-section {
         flex-direction: column;
@@ -2059,12 +2053,16 @@ a {
 
     .about-image {
         margin: 5px 10px 0;
+
         width: calc(100% - 20px);
     }
 
     .about-image img {
         height: 220px;
     }
+
+
+    /* ---------- JOURNEY ---------- */
 
     .journey-section {
         flex-direction: column;
@@ -2121,9 +2119,7 @@ a {
     }
 
 
-    /* =====================================================
-       VISION
-       ===================================================== */
+    /* ---------- VISION ---------- */
 
     .vision-intro {
         padding: 40px 20px 30px;
@@ -2178,9 +2174,7 @@ a {
     }
 
 
-    /* =====================================================
-       DEALS
-       ===================================================== */
+    /* ---------- DEALS ---------- */
 
     .deals-intro {
         padding: 40px 20px 25px;
@@ -2237,9 +2231,7 @@ a {
     }
 
 
-    /* =====================================================
-       BRANCHES
-       ===================================================== */
+    /* ---------- BRANCHES ---------- */
 
     .branches-intro {
         padding: 40px 20px 25px;
@@ -2300,9 +2292,7 @@ a {
     }
 
 
-    /* =====================================================
-       CONTACT
-       ===================================================== */
+    /* ---------- CONTACT ---------- */
 
     .contact-intro {
         padding: 40px 20px 25px;
@@ -2382,7 +2372,7 @@ a {
 
 
 /* =========================================================
-   17. SMALL PHONES
+   21. SMALL PHONES — MAX 575.98px
    ========================================================= */
 
 @media (max-width: 575.98px) {
@@ -2397,12 +2387,9 @@ a {
         width: 65px;
     }
 
-    .brand-red {
-        font-size: 15px;
-    }
-
+    .brand-red,
     .brand-blue {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .navbar-brand {
@@ -2411,83 +2398,81 @@ a {
 
     .navbar-toggler {
         width: 42px;
-
         height: 38px;
+    }
+
+
+    /* ---------- NEWS ---------- */
+
+    .news-label {
+        min-width: 95px;
+
+        padding: 0 8px;
+
+        font-size: 10px;
+    }
+
+    .news-text {
+        font-size: 10px;
     }
 
 
     /* ---------- HERO ---------- */
 
-    .hero {
-        min-height: 480px;
-    }
-
-    #homeCarousel,
     .hero-slide {
-        height: 480px;
-    }
-
-    .hero-container {
-        padding: 0 15px;
+        height: 500px;
     }
 
     .hero-caption {
-        max-width: 94%;
+        left: 5%;
 
-        padding: 22px 18px;
+        width: 90%;
+
+        padding: 22px 23px;
+
+        border-left-width: 4px;
     }
 
     .hero-caption h1 {
-        font-size: 29px;
+        font-size: 28px;
     }
 
     .hero-text {
         font-size: 13px;
-
-        line-height: 1.5;
     }
 
     .hero-label {
-        font-size: 10px;
+        font-size: 9px;
 
-        letter-spacing: 1px;
+        letter-spacing: 1.2px;
     }
 
     .hero-button {
-        font-size: 13px;
-
         padding: 10px 18px;
+
+        font-size: 12px;
     }
 
 
-    /* ---------- HERO ARROWS ---------- */
-
-    #homeCarousel .carousel-control-prev-icon,
-    #homeCarousel .carousel-control-next-icon {
-        width: 30px;
-
-        height: 30px;
-    }
-
-
-    /* ---------- STATS ---------- */
+    /* ---------- STATISTICS ---------- */
 
     .stat-card {
-        padding: 22px 8px 18px;
+        height: 160px;
+
+        padding-top: 22px;
     }
 
     .stat-icon-circle {
         width: 50px;
-
         height: 50px;
-    }
 
-    .stat-icon-circle i {
         font-size: 21px;
+
+        margin-bottom: 9px;
     }
 
     .stat-card h3 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .stat-card p {
@@ -2495,7 +2480,18 @@ a {
     }
 
 
-    /* ---------- ABOUT ---------- */
+    /* ---------- SERVICE ---------- */
+
+    .service-content h2 {
+        font-size: 20px;
+    }
+
+    .service-content p {
+        font-size: 12px;
+    }
+
+
+    /* ---------- HEADINGS ---------- */
 
     .about-content h1,
     .vision-intro h1,
@@ -2508,6 +2504,9 @@ a {
     .about-content p {
         font-size: 14px;
     }
+
+
+    /* ---------- ABOUT ---------- */
 
     .about-image img {
         height: 190px;
@@ -2573,7 +2572,7 @@ a {
 
 
 /* =========================================================
-   18. VERY SMALL DEVICES
+   22. VERY SMALL DEVICES — MAX 380px
    ========================================================= */
 
 @media (max-width: 380px) {
@@ -2582,35 +2581,244 @@ a {
         width: 58px;
     }
 
-    .brand-red {
-        font-size: 13px;
-    }
-
+    .brand-red,
     .brand-blue {
-        font-size: 11px;
-    }
-
-    .hero-caption {
-        max-width: 95%;
-
-        padding: 20px 15px;
-    }
-
-    .hero-caption h1 {
-        font-size: 26px;
-    }
-
-    .hero-text {
-        font-size: 12px;
-    }
-
-    .hero-button {
-        font-size: 12px;
-
-        padding: 9px 15px;
+        font-size: 13px;
     }
 
     .about-stats {
         margin: 10px;
     }
+
+    .hero-caption h1 {
+        font-size: 25px;
+    }
+}
+
+/* =========================================================
+   16. FOOTER — FIGMA STYLE
+   ========================================================= */
+
+.site-footer {
+    background-color: #0b3d7a;
+    color: var(--white);
+    padding: 28px 0;
+}
+
+
+/* =========================================================
+   FOOTER ROW
+   ========================================================= */
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+   ========================================================= */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    width: 38%;
+}
+
+
+.footer-brand img {
+    width: 58px;
+    height: auto;
+    display: block;
+    margin-right: 18px;
+}
+
+
+/* Footer Brand Name */
+
+.footer-brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+
+.footer-red {
+    color: var(--red);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.footer-white {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FOOTER QUICK LINKS
+   ========================================================= */
+
+.footer-links {
+    width: 35%;
+}
+
+
+.footer-links h3 {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+
+.footer-links-columns {
+    display: flex;
+    gap: 45px;
+}
+
+
+.footer-links-columns > div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-links a {
+    color: var(--white);
+    font-size: 12px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+
+.footer-links a:hover {
+    color: #dddddd;
+}
+
+
+/* =========================================================
+   FOOTER — TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .site-footer {
+        padding: 25px 0;
+    }
+
+
+    .footer-brand {
+        width: 40%;
+    }
+
+
+    .footer-links {
+        width: 40%;
+    }
+
+
+    .footer-brand img {
+        width: 55px;
+        margin-right: 15px;
+    }
+
+
+    .footer-red,
+    .footer-white {
+        font-size: 20px;
+    }
+
+
+    .footer-links-columns {
+        gap: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER — MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .site-footer {
+        padding: 30px 20px;
+    }
+
+
+    .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+
+    .footer-brand {
+        width: 100%;
+    }
+
+
+    .footer-links {
+        width: 100%;
+    }
+
+
+    .footer-links h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+
+    .footer-links-columns {
+        gap: 50px;
+    }
+
+
+    .footer-links a {
+        font-size: 13px;
+        margin-bottom: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER — SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .site-footer {
+        padding: 28px 15px;
+    }
+
+
+    .footer-brand img {
+        width: 52px;
+        margin-right: 14px;
+    }
+
+
+    .footer-red,
+    .footer-white {
+        font-size: 19px;
+    }
+
+
+    .footer-links-columns {
+        gap: 40px;
+    }
+
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
 }
