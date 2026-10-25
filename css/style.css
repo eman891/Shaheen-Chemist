@@ -2596,229 +2596,1525 @@ a {
 }
 
 /* =========================================================
-   16. FOOTER — FIGMA STYLE
+   FOOTER — VISION PAGE
    ========================================================= */
 
 .site-footer {
     background-color: #0b3d7a;
     color: var(--white);
-    padding: 28px 0;
+    width: 100%;
+    padding: 38px 0;
+}
+
+/* =========================================================
+   FOOTER CONTENT
+   ========================================================= */
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 125px;
 }
 
 
 /* =========================================================
-   FOOTER ROW
+   FOOTER QUOTE
    ========================================================= */
 
-.footer-row {
+.footer-quote {
+    position: relative;
+
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 72%;
 }
 
 
 /* =========================================================
-   FOOTER BRAND
+   QUOTE MARKS
    ========================================================= */
 
-.footer-brand {
-    display: flex;
-    align-items: center;
-    width: 38%;
-}
+.footer-quote-mark {
+    color: var(--white);
 
+    font-size: 52px;
+    font-weight: bold;
 
-.footer-brand img {
-    width: 58px;
-    height: auto;
-    display: block;
+    line-height: 0.75;
+
     margin-right: 18px;
 }
 
 
-/* Footer Brand Name */
+.footer-quote-right {
+    align-self: flex-end;
 
-.footer-brand-name {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.05;
-}
-
-
-.footer-red {
-    color: var(--red);
-    font-size: 22px;
-    font-weight: bold;
-}
-
-
-.footer-white {
-    color: var(--white);
-    font-size: 22px;
-    font-weight: bold;
+    margin-left: 18px;
+    margin-right: 0;
 }
 
 
 /* =========================================================
-   FOOTER QUICK LINKS
+   QUOTE TEXT
    ========================================================= */
 
-.footer-links {
-    width: 35%;
+.footer-quote-text {
+    padding-top: 2px;
 }
 
 
-.footer-links h3 {
+.footer-quote-text p {
     color: var(--white);
-    font-size: 15px;
-    font-weight: bold;
-    margin: 0 0 10px;
-}
 
+    font-size: 17px;
+    line-height: 1.5;
 
-.footer-links-columns {
-    display: flex;
-    gap: 45px;
-}
+    margin: 0 0 15px;
 
-
-.footer-links-columns > div {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.footer-links a {
-    color: var(--white);
-    font-size: 12px;
-    margin-bottom: 8px;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-
-.footer-links a:hover {
-    color: #dddddd;
+    font-weight: 400;
 }
 
 
 /* =========================================================
-   FOOTER — TABLET
+   AUTHOR
+   ========================================================= */
+
+.footer-author {
+    color: var(--white);
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    margin-bottom: 2px;
+}
+
+
+/* =========================================================
+   POSITION
+   ========================================================= */
+
+.footer-position {
+    color: var(--white);
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+   ========================================================= */
+
+.footer-logo {
+    width: 28%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================================
+   TABLET
    ========================================================= */
 
 @media (max-width: 991.98px) {
 
     .site-footer {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
-
-    .footer-brand {
-        width: 40%;
+    .footer-content {
+        min-height: 115px;
     }
 
-
-    .footer-links {
-        width: 40%;
+    .footer-quote {
+        width: 72%;
     }
 
-
-    .footer-brand img {
-        width: 55px;
-        margin-right: 15px;
+    .footer-logo {
+        width: 25%;
     }
 
-
-    .footer-red,
-    .footer-white {
-        font-size: 20px;
+    .footer-logo img {
+        width: 125px;
     }
 
+    .footer-quote-mark {
+        font-size: 46px;
+    }
 
-    .footer-links-columns {
-        gap: 30px;
+    .footer-quote-text p {
+        font-size: 15px;
     }
 
 }
 
 
 /* =========================================================
-   FOOTER — MOBILE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 767.98px) {
 
     .site-footer {
-        padding: 30px 20px;
+        padding: 35px 20px;
     }
 
-
-    .footer-row {
+    .footer-content {
         flex-direction: column;
-        align-items: flex-start;
+
+        align-items: center;
+
         gap: 25px;
+
+        min-height: auto;
     }
 
-
-    .footer-brand {
+    .footer-quote {
         width: 100%;
+
+        justify-content: center;
+
+        text-align: left;
     }
 
-
-    .footer-links {
+    .footer-logo {
         width: 100%;
+
+        justify-content: center;
     }
 
-
-    .footer-links h3 {
-        font-size: 16px;
-        margin-bottom: 12px;
+    .footer-logo img {
+        width: 100px;
     }
 
+    .footer-quote-mark {
+        font-size: 42px;
 
-    .footer-links-columns {
-        gap: 50px;
+        margin-right: 10px;
     }
 
+    .footer-quote-right {
+        margin-left: 10px;
+    }
 
-    .footer-links a {
-        font-size: 13px;
-        margin-bottom: 9px;
+    .footer-quote-text p {
+        font-size: 14px;
     }
 
 }
 
 
 /* =========================================================
-   FOOTER — SMALL PHONES
+   SMALL PHONES
    ========================================================= */
 
 @media (max-width: 575.98px) {
 
     .site-footer {
-        padding: 28px 15px;
+        padding: 30px 15px;
     }
 
-
-    .footer-brand img {
-        width: 52px;
-        margin-right: 14px;
+    .footer-quote {
+        width: 100%;
     }
 
+    .footer-quote-text p {
+        font-size: 13px;
+    }
 
-    .footer-red,
-    .footer-white {
+    .footer-author {
+        font-size: 10px;
+    }
+
+    .footer-position {
+        font-size: 9px;
+    }
+
+    .footer-quote-mark {
+        font-size: 36px;
+    }
+
+    .footer-logo img {
+        width: 90px;
+    }
+
+}
+
+/* =========================================================
+   CONTACT PAGE FOOTER
+   ========================================================= */
+
+.contact-page .site-footer {
+    background-color: #0b3d7a;
+    color: var(--white);
+
+    padding: 28px 0;
+}
+
+
+/* =========================================================
+   CONTACT FOOTER ROW
+   ========================================================= */
+
+.contact-page .footer-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CONTACT FOOTER BRAND
+   ========================================================= */
+
+.contact-page .footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    width: 45%;
+}
+
+
+.contact-page .footer-brand img {
+    width: 75px;
+    height: auto;
+    display: block;
+    margin-right: 18px;
+    opacity: 0.78;
+}
+
+/* =========================================================
+   CONTACT FOOTER BRAND NAME
+   ========================================================= */
+
+.contact-page .footer-brand-name {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.1;
+}
+
+
+.contact-page .footer-red {
+    color: #b94b5a;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.contact-page .footer-white {
+    color: #f1f3f6;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   CONTACT FOOTER QUICK LINKS
+   ========================================================= */
+
+.contact-page .footer-links {
+    width: 45%;
+}
+
+
+.contact-page .footer-links h3 {
+    color: #f1f3f6;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    margin: 0 0 12px;
+}
+
+
+.contact-page .footer-links-columns {
+    display: flex;
+
+    gap: 45px;
+}
+
+
+.contact-page .footer-links-columns > div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.contact-page .footer-links a {
+    color: var(--white);
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+.contact-page .footer-links a:hover {
+    color: #dddddd;
+}
+
+
+/* =========================================================
+   CONTACT FOOTER — TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .contact-page .site-footer {
+        padding: 25px 0;
+    }
+
+    .contact-page .footer-brand {
+        width: 45%;
+    }
+
+    .contact-page .footer-links {
+        width: 45%;
+    }
+
+    .contact-page .footer-brand img {
+        width: 65px;
+
+        margin-right: 15px;
+    }
+
+    .contact-page .footer-red,
+    .contact-page .footer-white {
         font-size: 19px;
     }
 
+    .contact-page .footer-links-columns {
+        gap: 30px;
+    }
+}
 
-    .footer-links-columns {
-        gap: 40px;
+
+/* =========================================================
+   CONTACT FOOTER — MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .contact-page .site-footer {
+        padding: 30px 20px;
+    }
+
+    .contact-page .footer-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .contact-page .footer-brand {
+        width: 100%;
+    }
+
+    .contact-page .footer-links {
+        width: 100%;
+    }
+
+    .contact-page .footer-links h3 {
+        font-size: 16px;
+
+        margin-bottom: 12px;
+    }
+
+    .contact-page .footer-links-columns {
+        gap: 50px;
+    }
+
+    .contact-page .footer-links a {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   CONTACT FOOTER — SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .contact-page .site-footer {
+        padding: 28px 15px;
+    }
+
+    .contact-page .footer-brand img {
+        width: 58px;
+
+        margin-right: 14px;
+    }
+
+    .contact-page .footer-red,
+    .contact-page .footer-white {
+        font-size: 18px;
+    }
+
+    .contact-page .footer-links-columns {
+        gap: 35px;
+    }
+
+    .contact-page .footer-links a {
+        font-size: 12px;
+    }
+}
+
+/* =========================================================
+   FINAL PAGE FIXES
+   ABOUT + DEALS + BRANCHES
+   ========================================================= */
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-section {
+    padding: 55px 0;
+    background-color: var(--white);
+}
+
+.about-content {
+    width: 100%;
+}
+
+.about-content h1 {
+    color: var(--red);
+    font-size: 32px;
+    margin: 0 0 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.about-content h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: var(--blue);
+    margin-top: 10px;
+}
+
+.about-content p {
+    color: var(--text-gray);
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 20px;
+    max-width: 550px;
+}
+
+.about-image {
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.about-image::before {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border: 3px solid var(--red);
+
+    top: 10px;
+    left: 10px;
+
+    border-radius: 8px;
+
+    z-index: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 310px;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 8px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   ABOUT JOURNEY
+   ========================================================= */
+
+.journey-section {
+    padding: 55px 0;
+    background-color: #f8f9fa;
+}
+
+.journey-image {
+    width: 100%;
+}
+
+.journey-image img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 8px;
+
+    border-left: 5px solid var(--blue);
+}
+
+.journey-content {
+    width: 100%;
+}
+
+.journey-content h2 {
+    color: var(--blue);
+
+    font-size: 25px;
+
+    margin: 0 0 14px;
+
+    font-weight: bold;
+}
+
+.journey-content h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    background-color: var(--red);
+
+    margin-top: 8px;
+}
+
+.journey-content p {
+    color: var(--text-gray);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   ABOUT STATISTICS
+   Uses the SAME cards as HOME
+   ========================================================= */
+
+.about-page-stats {
+    background-color: #f8f9fa;
+    padding: 42px 0;
+}
+
+
+/* =========================================================
+   DEALS PAGE
+   ========================================================= */
+
+.deals-intro {
+    padding: 55px 0 35px;
+    background-color: var(--white);
+}
+
+.deals-intro h1 {
+    color: var(--red);
+
+    font-size: 32px;
+
+    text-align: left;
+
+    margin: 0 0 15px;
+
+    font-weight: bold;
+}
+
+.deals-intro h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    background-color: var(--blue);
+
+    margin-top: 10px;
+}
+
+.deals-intro p {
+    color: var(--text-gray);
+
+    font-size: 16px;
+
+    margin: 0;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DEAL CARDS SECTION
+   ========================================================= */
+
+.deal-cards {
+    padding: 40px 0 50px;
+
+    background-color: #f8f9fa;
+}
+
+
+/* =========================================================
+   DEAL CARD
+   ========================================================= */
+
+.deal-card {
+    position: relative;
+
+    background-color: var(--white);
+
+    border: 1px solid #e2e5ea;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    height: 100%;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* Small red line at top like Home cards */
+
+.deal-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 42px;
+    height: 3px;
+
+    background-color: var(--red);
+
+    border-radius: 0 0 5px 5px;
+
+    z-index: 3;
+}
+
+
+.deal-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d5dce7;
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+.deal-card img {
+    width: 100%;
+
+    height: 175px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.deal-card-content {
+    padding: 17px 18px 20px;
+}
+
+
+.deal-card h2 {
+    color: var(--blue);
+
+    font-size: 18px;
+
+    margin: 0 0 8px;
+
+    font-weight: bold;
+}
+
+
+.deal-card p {
+    color: var(--text-gray);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   ONE STOP SOLUTION
+   ========================================================= */
+
+.one-stop {
+    background-color: #f4f2e9;
+
+    padding: 25px 0;
+
+    margin: 0;
+}
+
+
+.one-stop-inner {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 70px;
+}
+
+
+.one-stop-icon {
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--white);
+
+    border-radius: 50%;
+
+    color: var(--red);
+
+    font-size: 29px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+.one-stop-content h2 {
+    color: var(--blue);
+
+    font-size: 20px;
+
+    margin: 0 0 5px;
+
+    font-weight: bold;
+}
+
+
+.one-stop-content p {
+    color: var(--text-gray);
+
+    font-size: 14px;
+
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BRANCHES PAGE
+   ========================================================= */
+
+.branches-intro {
+    padding: 55px 0 35px;
+
+    background-color: var(--white);
+}
+
+.branches-intro h1 {
+    color: var(--red);
+
+    font-size: 32px;
+
+    text-align: left;
+
+    margin: 0 0 15px;
+
+    font-weight: bold;
+}
+
+.branches-intro h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    background-color: var(--blue);
+
+    margin-top: 10px;
+}
+
+.branches-intro p {
+    color: var(--text-gray);
+
+    font-size: 16px;
+
+    margin: 0;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BRANCH MAIN
+   ========================================================= */
+
+.branches-main {
+    padding: 40px 0 45px;
+
+    background-color: #f8f9fa;
+}
+
+
+/* =========================================================
+   BRANCH LIST
+   ========================================================= */
+
+.branch-list {
+    width: 100%;
+
+    background-color: var(--blue);
+
+    padding: 10px;
+
+    border-radius: 9px;
+
+    height: 100%;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BRANCH ITEM
+   ========================================================= */
+
+.branch-item {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 10px;
+
+    border: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+    background-color: transparent;
+
+    color: var(--white);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+.branch-item:last-child {
+    border-bottom: none;
+}
+
+
+/* Hover — stays blue */
+
+.branch-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+
+    padding-left: 14px;
+}
+
+
+/* Active — subtle white highlight */
+
+.branch-item.active {
+    background-color: rgba(255, 255, 255, 0.13);
+
+    font-weight: bold;
+}
+
+
+.branch-location-icon {
+    color: var(--white);
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
+.branch-name {
+    color: var(--white);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    flex: 1;
+}
+
+
+.branch-item.active .branch-name {
+    font-weight: bold;
+}
+
+
+.branch-arrow {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 12px;
+
+    flex-shrink: 0;
+
+    transition: transform 0.2s ease;
+}
+
+
+.branch-item:hover .branch-arrow,
+.branch-item.active .branch-arrow {
+    transform: translateX(3px);
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   BRANCH MAP
+   ========================================================= */
+
+.branch-map {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 500px;
+
+    background-color: #dddddd;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+}
+
+
+.branch-map iframe {
+    width: 100%;
+
+    height: calc(100% - 58px);
+
+    min-height: 440px;
+
+    border: 0;
+
+    display: block;
+}
+
+
+/* =========================================================
+   MAP ACTION BUTTONS
+   ========================================================= */
+
+.map-actions {
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    background-color: var(--white);
+
+    border-top: 1px solid #e5e5e5;
+}
+
+
+.map-actions a,
+.map-actions button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 14px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.map-actions a {
+    background-color: var(--blue);
+
+    color: var(--white);
+
+    border: 1px solid var(--blue);
+}
+
+
+.map-actions a:hover {
+    background-color: #002f72;
+
+    color: var(--white);
+}
+
+
+.map-actions button {
+    background-color: var(--white);
+
+    color: var(--blue);
+
+    border: 1px solid #d7dce4;
+}
+
+
+.map-actions button:hover {
+    background-color: #f3f6fb;
+
+    border-color: var(--blue);
+}
+
+
+/* =========================================================
+   BRANCH STATISTICS
+   Same cards as HOME
+   ========================================================= */
+
+.branch-page-stats {
+    background-color: #f8f9fa;
+
+    padding: 42px 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    /* ABOUT */
+
+    .about-section {
+        padding: 45px 0;
+    }
+
+    .about-image img {
+        height: 270px;
+    }
+
+    .journey-section {
+        padding: 45px 0;
+    }
+
+    .journey-image img {
+        height: 250px;
     }
 
 
-    .footer-links a {
+    /* DEALS */
+
+    .deals-intro {
+        padding: 45px 5% 30px;
+    }
+
+    .deal-cards {
+        padding: 35px 5% 45px;
+    }
+
+    .deal-card img {
+        height: 170px;
+    }
+
+
+    /* BRANCHES */
+
+    .branches-intro {
+        padding: 45px 5% 30px;
+    }
+
+    .branches-main {
+        padding: 30px 5% 40px;
+    }
+
+    .branch-list {
+        height: auto;
+    }
+
+    .branch-map {
+        min-height: 450px;
+    }
+
+    .branch-map iframe {
+        min-height: 390px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    .about-section {
+        padding: 40px 20px;
+    }
+
+    .about-content h1 {
+        font-size: 27px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .about-image {
+        margin: 5px 10px 0;
+
+        width: calc(100% - 20px);
+    }
+
+    .about-image img {
+        height: 220px;
+    }
+
+
+    .journey-section {
+        padding: 40px 20px;
+    }
+
+    .journey-image img {
+        height: 210px;
+    }
+
+    .journey-content h2 {
+        font-size: 22px;
+    }
+
+    .journey-content p {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       ABOUT STATISTICS
+       ===================================================== */
+
+    .about-page-stats {
+        padding: 30px 10px;
+    }
+
+
+    /* =====================================================
+       DEALS
+       ===================================================== */
+
+    .deals-intro {
+        padding: 40px 20px 25px;
+    }
+
+    .deals-intro h1 {
+        font-size: 27px;
+    }
+
+    .deals-intro p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .deal-cards {
+        padding: 25px 20px 35px;
+    }
+
+    .deal-card img {
+        height: 190px;
+    }
+
+    .deal-card-content {
+        padding: 16px 15px 19px;
+    }
+
+    .deal-card h2 {
+        font-size: 17px;
+    }
+
+    .deal-card p {
+        font-size: 13px;
+    }
+
+
+    /* ONE STOP */
+
+    .one-stop {
+        padding: 25px 20px;
+    }
+
+    .one-stop-inner {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .one-stop-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 25px;
+    }
+
+    .one-stop-content h2 {
+        font-size: 17px;
+
+        line-height: 1.4;
+    }
+
+    .one-stop-content p {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       BRANCHES
+       ===================================================== */
+
+    .branches-intro {
+        padding: 40px 20px 25px;
+    }
+
+    .branches-intro h1 {
+        font-size: 27px;
+    }
+
+    .branches-intro p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .branches-main {
+        padding: 25px 20px 35px;
+    }
+
+
+    .branch-list {
+        padding: 8px;
+    }
+
+
+    .branch-item {
+        padding: 12px 8px;
+    }
+
+
+    .branch-name {
         font-size: 12px;
+    }
+
+
+    .branch-map {
+        min-height: 350px;
+    }
+
+
+    .branch-map iframe {
+        min-height: 292px;
+    }
+
+
+    .map-actions {
+        height: auto;
+
+        padding: 9px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .map-actions a,
+    .map-actions button {
+        width: 100%;
+    }
+
+
+    .branch-page-stats {
+        padding: 30px 10px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+
+    /* ABOUT */
+
+    .about-content h1 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .about-image img {
+        height: 190px;
+    }
+
+    .journey-image img {
+        height: 175px;
+    }
+
+
+    /* DEALS */
+
+    .deal-card img {
+        height: 180px;
+    }
+
+
+    /* BRANCHES */
+
+    .branch-map {
+        min-height: 310px;
+    }
+
+    .branch-map iframe {
+        min-height: 252px;
+    }
+
+    .branch-page-stats {
+        padding: 25px 10px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .about-image img {
+        height: 175px;
+    }
+
+    .journey-image img {
+        height: 160px;
+    }
+
+    .deal-card img {
+        height: 165px;
+    }
+
+    .branch-name {
+        font-size: 11px;
     }
 
 }

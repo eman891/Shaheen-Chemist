@@ -9,7 +9,8 @@
     <title>Deals In - Shaheen Chemist</title>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet"
@@ -20,28 +21,40 @@
 
 </head>
 
+
 <body>
 
-    <!-- ================= NAVBAR ================= -->
 
-    <nav class="navbar navbar-expand-lg">
+<!-- =========================================================
+     NAVBAR
+     ========================================================= -->
 
-        <div class="container">
+<nav class="navbar navbar-expand-lg">
 
-            <a class="navbar-brand" href="deals.html">
+    <div class="container">
 
-                <img src="images/sc logo.png"
-                    alt="Shaheen Chemist Logo"
-                    class="img-fluid">
+        <a class="navbar-brand" href="index.html">
 
-                <div class="brand-name">
-                    <span class="brand-red">SHAHEEN CHEMIST</span>
-                    <span class="brand-blue">&amp; GROCERS</span>
-                </div>
+            <img src="images/sc logo.png"
+                 alt="Shaheen Chemist Logo"
+                 class="img-fluid">
 
-            </a>
+            <div class="brand-name">
 
-            <button class="navbar-toggler"
+                <span class="brand-red">
+                    SHAHEEN CHEMIST
+                </span>
+
+                <span class="brand-blue">
+                    &amp; GROCERS
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#mainNavbar"
@@ -49,64 +62,124 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation">
 
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
 
-            </button>
+        </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
 
-                <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse" id="mainNavbar">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
+            <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="vision.html">Our Vision</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        About Us
+                    </a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="deals.html">Deals In</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vision.html">
+                        Our Vision
+                    </a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="branches.html">Branches</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="deals.html">
+                        Deals In
+                    </a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="branches.html">
+                        Branches
+                    </a>
+                </li>
 
-                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     DEALS INTRO
+     ========================================================= -->
+
+<section class="deals-intro">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-10">
+
+                <h1>
+                    Deals In
+                </h1>
+
+                <p>
+                    Shaheen Chemist &amp; Grocers offer a wide range
+                    of products to meet all your needs under one roof.
+                </p>
 
             </div>
 
         </div>
 
-    </nav>
+    </div>
+
+</section>
 
 
-    <main>
 
-        <!-- ================= DEALS INTRO ================= -->
+<!-- =========================================================
+     DEAL CARDS
+     ========================================================= -->
 
-        <section class="deals-intro">
+<section class="deal-cards">
 
-            <div class="container">
+    <div class="container">
 
-                <div class="row">
+        <div class="row g-3 justify-content-center">
 
-                    <div class="col-lg-10">
 
-                        <h1>Deals In</h1>
+            <!-- PHARMACY -->
+
+            <div class="col-12 col-sm-6 col-lg-4 col-xl">
+
+                <div class="deal-card">
+
+                    <img src="images/pharmacy.png"
+                         alt="Pharmacy">
+
+                    <div class="deal-card-content">
+
+                        <h2>
+                            Pharmacy
+                        </h2>
 
                         <p>
-                            Shaheen Chemist &amp; Grocers offer a wide range
-                            of products to meet all your needs under one roof.
+                            Prescription &amp; OTC medicines,
+                            medical supplies &amp; more.
                         </p>
 
                     </div>
@@ -115,108 +188,26 @@
 
             </div>
 
-        </section>
 
+            <!-- GROCERIES -->
 
-        <!-- ================= DEAL CARDS ================= -->
+            <div class="col-12 col-sm-6 col-lg-4 col-xl">
 
-        <section class="deal-cards">
+                <div class="deal-card">
 
-            <div class="container">
+                    <img src="images/grocery.png"
+                         alt="Groceries">
 
-                <div class="row g-4">
+                    <div class="deal-card-content">
 
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl">
+                        <h2>
+                            Groceries
+                        </h2>
 
-                        <div class="deal-card h-100">
-
-                            <img src="images/pharmacy.jpg"
-                                alt="Pharmacy">
-
-                            <h2>Pharmacy</h2>
-
-                            <p>
-                                Prescription &amp; OTC medicines,
-                                healthcare essentials &amp; more.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl">
-
-                        <div class="deal-card h-100">
-
-                            <img src="images/groceries.jpg"
-                                alt="Groceries">
-
-                            <h2>Groceries</h2>
-
-                            <p>
-                                Fresh and packaged foods,
-                                beverages, confectioneries and more.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl">
-
-                        <div class="deal-card h-100">
-
-                            <img src="images/cosmetics.jpg"
-                                alt="Cosmetics">
-
-                            <h2>Cosmetics</h2>
-
-                            <p>
-                                Luxury and everyday beauty,
-                                perfumes and more.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl">
-
-                        <div class="deal-card h-100">
-
-                            <img src="images/optics.jpg"
-                                alt="Optics">
-
-                            <h2>Optics</h2>
-
-                            <p>
-                                Prescription lenses,
-                                sunglasses and contact lenses.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl">
-
-                        <div class="deal-card h-100">
-
-                            <img src="images/health.jpg"
-                                alt="Health and Wellness">
-
-                            <h2>Health and Wellness</h2>
-
-                            <p>
-                                Vitamins, fitness and personal
-                                care essentials.
-                            </p>
-
-                        </div>
+                        <p>
+                            Fresh &amp; packaged food, beverages,
+                            confectioneries &amp; more.
+                        </p>
 
                     </div>
 
@@ -224,44 +215,194 @@
 
             </div>
 
-        </section>
 
+            <!-- COSMETICS -->
 
-        <!-- ================= ONE STOP SOLUTION ================= -->
+            <div class="col-12 col-sm-6 col-lg-4 col-xl">
 
-        <section class="one-stop">
+                <div class="deal-card">
 
-            <div class="one-stop-box">
+                    <img src="images/cosmetics.png"
+                         alt="Cosmetics">
 
-                <div class="one-stop-icon">
-                    <i class="bi bi-bag-heart-fill"></i>
-                </div>
+                    <div class="deal-card-content">
 
-                <div class="one-stop-content">
+                        <h2>
+                            Cosmetics
+                        </h2>
 
-                    <h2>
-                        One Stop Solution for Your Everyday Needs
-                    </h2>
+                        <p>
+                            Luxury &amp; drugstore brands,
+                            skincare, perfumes &amp; more.
+                        </p>
 
-                    <p>
-                        Quality products, trusted brands and
-                        exceptional service
-                    </p>
+                    </div>
 
                 </div>
 
             </div>
 
-            <div class="one-stop-accent"></div>
 
-        </section>
+            <!-- OPTICS -->
 
-    </main>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl">
+
+                <div class="deal-card">
+
+                    <img src="images/optics.png"
+                         alt="Optics">
+
+                    <div class="deal-card-content">
+
+                        <h2>
+                            Optics
+                        </h2>
+
+                        <p>
+                            Prescription lenses,
+                            designer frames &amp; contact lenses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 
-    <!-- Bootstrap JS -->
+            <!-- HEALTH & WELLNESS -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl">
+
+                <div class="deal-card">
+
+                    <img src="images/hw.png"
+                         alt="Health and Wellness">
+
+                    <div class="deal-card-content">
+
+                        <h2>
+                            Health &amp; Wellness
+                        </h2>
+
+                        <p>
+                            Fitness, wellness &amp;
+                            personal care essentials.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ONE STOP SOLUTION
+     ========================================================= -->
+
+<section class="one-stop">
+
+    <div class="container">
+
+        <div class="one-stop-inner">
+
+            <div class="one-stop-icon">
+
+                <i class="bi bi-bag-heart-fill"></i>
+
+            </div>
+
+
+            <div class="one-stop-content">
+
+                <h2>
+                    One Stop Solution for Your Everyday Needs
+                </h2>
+
+                <p>
+                    Quality products, trusted brands, and exceptional service.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     BLUE FOOTER
+     ========================================================= -->
+
+<footer class="service-area">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-8 service-content">
+
+                <h2>
+                    Quality, Care &amp; Convenience
+                    <span>Under One Roof</span>
+                </h2>
+
+                <p>
+
+                    Pharmacy
+
+                    <span>•</span>
+
+                    Groceries
+
+                    <span>•</span>
+
+                    Cosmetics
+
+                    <span>•</span>
+
+                    Optics
+
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-4 service-logo-wrapper">
+
+                <img src="images/sc logo.png"
+                     alt="Shaheen Chemist"
+                     class="service-logo">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
